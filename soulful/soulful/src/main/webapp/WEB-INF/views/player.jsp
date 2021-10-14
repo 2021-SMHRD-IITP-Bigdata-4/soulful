@@ -1,5 +1,13 @@
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false"%>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
   <title>pulse - Music, Audio and Radio web application</title>
@@ -17,21 +25,21 @@
   <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
   
   <!-- style -->
-  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
-  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
-  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
 
   <!-- build:css css/styles/app.min.css -->
-  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
-  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
-  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/styles/style.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/styles/font.css" type="text/css" />
   
-  <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css" type="text/css" />
-  <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.css" type="text/css" />
-  <link rel="stylesheet" href="libs/mediaelement/build/mediaelementplayer.min.css" type="text/css" />
-  <link rel="stylesheet" href="libs/mediaelement/build/mep.css" type="text/css" />
+  <link rel="stylesheet" href="resources/libs/owl.carousel/dist/assets/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/libs/owl.carousel/dist/assets/owl.theme.css" type="text/css" />
+  <link rel="stylesheet" href="resources/libs/mediaelement/build/mediaelementplayer.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/libs/mediaelement/build/mep.css" type="text/css" />
 
   <!-- endbuild -->
 </head>
@@ -56,7 +64,7 @@
         		<circle cx="24" cy="24" r="3" fill="#000000"/>
         	</svg>
         
-        	<img src="images/logo.png" alt="." class="hide">
+        	<img src="resources/images/logo.png" alt="." class="hide">
         	<span class="hidden-folded inline">SoulFull</span>
         </a>
         <!-- / brand -->
@@ -75,7 +83,7 @@
 					  play_circle_outline
 					</i>
 				  </span>
-				  <span class="nav-text">음악추천</span>
+				  <span class="nav-text">플레이리스트</span>
 				</a>
 			  </li>
 			  <li>
@@ -85,7 +93,7 @@
 					  sort
 					</i>
 				  </span>
-				  <span class="nav-text">장르 별</span>
+				  <span class="nav-text">장르별 리스트</span>
 				</a>
 			  </li>
 			  <li>
@@ -105,7 +113,7 @@
 					  portrait
 					</i>
 				  </span>
-				  <span class="nav-text">아티스트 별</span>
+				  <span class="nav-text">지울거</span>
 				</a>
 			  </li>
 			  <li>
@@ -115,7 +123,7 @@
 					  search
 					</i>
 				  </span>
-				  <span class="nav-text">검색</span>
+				  <span class="nav-text">음악 검색</span>
 				</a>
 			  </li>
 			  
@@ -133,7 +141,7 @@
 					  list
 					</i>
 				  </span>
-				  <span class="nav-text">나의 음악목록</span>
+				  <span class="nav-text">나의 음악 목록</span>
 				</a>
 			  </li>
 			  <li>
@@ -153,7 +161,7 @@
 						bi bi-book
 					</i>
 				  </span>
-				  <span class="nav-text">가사 모음집</span>
+				  <span class="nav-text">좋아요! 음악</span>
 				</a>
 			</li>
 			<li>
@@ -163,7 +171,7 @@
 					  favorite_border
 					</i>
 				  </span>
-				  <span class="nav-text">내 정보</span>
+				  <span class="nav-text">내정보</span>
 				</a>
 			</li>
 			  <!--공백-->
@@ -178,7 +186,7 @@
 					  favorite_border
 					</i>
 				  </span>
-				  <span class="nav-text">로그인</span>
+				  <span class="nav-text">회원가입</span>
 				</a>
 			  </li>
 			  <li>
@@ -188,7 +196,7 @@
 					  favorite_border
 					</i>
 				  </span>
-				  <span class="nav-text">회원가입</span>
+				  <span class="nav-text">로그인</span>
 				</a>
 			  </li>
 			  <li>
@@ -198,7 +206,7 @@
 					  favorite_border
 					</i>
 				  </span>
-				  <span class="nav-text">로그아웃</span>
+				  <span class="nav-text">로그아웃</span>
 				</a>
 			  </li>
 
@@ -209,7 +217,7 @@
 		  <div class="nav-fold dropup">
 			<a data-toggle="dropdown">
 				<span class="pull-left">
-				  <img src="images/a3.jpg" alt="..." class="w-32 img-circle">
+				  <img src="resources/images/a3.jpg" alt="..." class="w-32 img-circle">
 				</span>
 				<span class="clear hidden-folded p-x p-y-xs">
 				  <span class="block _500 text-ellipsis">Rachel Platten</span>
@@ -217,22 +225,22 @@
 			</a>
 			<div class="dropdown-menu w dropdown-menu-scale ">
 			  <a class="dropdown-item" href="profile.html#profile">
-				<span>나의 정보</span>
+				<span>ëì ì ë³´</span>
 			  </a>
 			  <a class="dropdown-item" href="profile.html#tracks">
-				<span>나의 앨범</span>
+				<span>ëì ì¨ë²</span>
 			  </a>
 			  <a class="dropdown-item" href="profile.html#playlists">
-				<span>나의 플레이리스트</span>
+				<span>ëì íë ì´ë¦¬ì¤í¸</span>
 			  </a>
 			  <a class="dropdown-item" href="profile.html#likes">
-				<span>좋아요</span>
+				<span>ì¢ìì</span>
 			  </a>
 			  <div class="dropdown-divider"></div>
 			  <a class="dropdown-item" href="docs.html">
-				도와드릴까요?
+				ëìëë¦´ê¹ì?
 			  </a>
-			  <a class="dropdown-item" href="signin.html">로그아웃</a>
+			  <a class="dropdown-item" href="signin.html">ë¡ê·¸ìì</a>
 			</div>
 		  </div>
 		  
@@ -256,7 +264,7 @@
         		<circle cx="24" cy="24" r="3" fill="#000000"/>
         	</svg>
         
-        	<img src="images/logo.png" alt="." class="hide">
+        	<img src="resources/images/logo.png" alt="." class="hide">
         	<span class="hidden-folded inline">SoulFull</span>
         </a>
 		
@@ -300,16 +308,16 @@
 <!-- ############ PAGE START-->
 
 <div class="page-content">
-<!-- 상단 타이틀
+<!-- ìë¨ íì´í
 	<div class="padding p-b-0">
 		<div class="page-title m-b">
-			<h1 class="inline m-a-0">R&B 추천</h1>
+			<h1 class="inline m-a-0">R&B ì¶ì²</h1>
 		</div>
 	-->
 	<div class="row-col">
 		<div class="col-lg-9 b-r no-border-md">
 			<div class="padding">
-				<h5 class="widget-title h5 m-b">오늘의 추천 플레이리스트</h5>
+				<h5 class="widget-title h5 m-b">감정 기반 추천 리스트</h5>
 				<div class="owl-carousel owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
 					margin: 20,
 					responsiveClass:true,
@@ -527,7 +535,7 @@
 				<div class="row-col">
 					<div class="col-lg-9 b-r no-border-md">
 						<div class="padding">
-							<h5 class="widget-title h5 m-b">가을에 어울릴 추천 리스트</h5>
+							<h5 class="widget-title h5 m-b">날씨 기반 추천 리스트</h5>
 							<div class="owl-carousel owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
 								margin: 20,
 								responsiveClass:true,
@@ -741,7 +749,7 @@
 										</div>
 									</div>
 							</div>
-							<h5 class="widget-title h5 m-b">비오는 날 추천 리스트</h5>
+							<h5 class="widget-title h5 m-b">다른 분위기의 음악을 원하시나요?</h5>
 							<div class="owl-carousel owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
 								margin: 20,
 								responsiveClass:true,
@@ -956,7 +964,7 @@
 									</div>
 							</div>
 							
-				<h5 class="widget-title h5 m-b">새로운 음악</h5>
+				<h5 class="widget-title h5 m-b">추천 음악</h5>
 				<div class="row">
 					    <div class="col-xs-4 col-sm-4 col-md-3">
 					    	<div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
@@ -1364,7 +1372,7 @@
                 <div class="input-group input-group-lg">
                   <input type="text" class="form-control" placeholder="Keyword" data-ui-toggle-class="hide" data-ui-target="#search-result">
                   <span class="input-group-btn">
-                    <button class="btn b-a no-shadow white" type="submit">검색</button>
+                    <button class="btn b-a no-shadow white" type="submit">ê²ì</button>
                   </span>
                 </div>
               </form>
@@ -1540,7 +1548,7 @@
                 <div class="input-group input-group-lg">
                   <input type="text" class="form-control" placeholder="Keyword" data-ui-toggle-class="hide" data-ui-target="#search-result">
                   <span class="input-group-btn">
-                    <button class="btn b-a no-shadow white" type="submit">검색</button>
+                    <button class="btn b-a no-shadow white" type="submit">ê²ì</button>
                   </span>
                 </div>
               </form>
@@ -1797,37 +1805,37 @@
 
 <!-- build:js scripts/app.min.js -->
 <!-- jQuery -->
-  <script src="libs/jquery/dist/jquery.js"></script>
+  <script src="resources/libs/jquery/dist/jquery.js"></script>
 <!-- Bootstrap -->
-  <script src="libs/tether/dist/js/tether.min.js"></script>
-  <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="resources/libs/tether/dist/js/tether.min.js"></script>
+  <script src="resources/libs/bootstrap/dist/js/bootstrap.js"></script>
 <!-- core -->
-  <script src="libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
-  <script src="libs/jquery.stellar/jquery.stellar.min.js"></script>
-  <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="libs/jscroll/jquery.jscroll.min.js"></script>
-  <script src="libs/PACE/pace.min.js"></script>
-  <script src="libs/jquery-pjax/jquery.pjax.js"></script>
+  <script src="resources/libs/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="resources/libs/jquery.stellar/jquery.stellar.min.js"></script>
+  <script src="resources/libs/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="resources/libs/jscroll/jquery.jscroll.min.js"></script>
+  <script src="resources/libs/PACE/pace.min.js"></script>
+  <script src="resources/libs/jquery-pjax/jquery.pjax.js"></script>
 
-  <script src="libs/mediaelement/build/mediaelement-and-player.min.js"></script>
-  <script src="libs/mediaelement/build/mep.js"></script>
-  <script src="scripts/player.js"></script>
+  <script src="resources/libs/mediaelement/build/mediaelement-and-player.min.js"></script>
+  <script src="resources/libs/mediaelement/build/mep.js"></script>
+  <script src="resources/scripts/player.js"></script>
 
-  <script src="scripts/config.lazyload.js"></script>
-  <script src="scripts/ui-load.js"></script>
-  <script src="scripts/ui-jp.js"></script>
-  <script src="scripts/ui-include.js"></script>
-  <script src="scripts/ui-device.js"></script>
-  <script src="scripts/ui-form.js"></script>
-  <script src="scripts/ui-nav.js"></script>
-  <script src="scripts/ui-screenfull.js"></script>
-  <script src="scripts/ui-scroll-to.js"></script>
-  <script src="scripts/ui-toggle-class.js"></script>
-  <script src="scripts/ui-taburl.js"></script>
-  <script src="scripts/app.js"></script>
-  <script src="scripts/site.js"></script>
-  <script src="scripts/ajax.js"></script>
-  <script src="scripts/btn-slide.js"></script>
+  <script src="resources/scripts/config.lazyload.js"></script>
+  <script src="resources/scripts/ui-load.js"></script>
+  <script src="resources/scripts/ui-jp.js"></script>
+  <script src="resources/scripts/ui-include.js"></script>
+  <script src="resources/scripts/ui-device.js"></script>
+  <script src="resources/scripts/ui-form.js"></script>
+  <script src="resources/scripts/ui-nav.js"></script>
+  <script src="resources/scripts/ui-screenfull.js"></script>
+  <script src="resources/scripts/ui-scroll-to.js"></script>
+  <script src="resources/scripts/ui-toggle-class.js"></script>
+  <script src="resources/scripts/ui-taburl.js"></script>
+  <script src="resources/scripts/app.js"></script>
+  <script src="resources/scripts/site.js"></script>
+  <script src="resources/scripts/ajax.js"></script>
+  <script src="resources/scripts/btn-slide.js"></script>
 <!-- endbuild -->
 </body>
 </html>
