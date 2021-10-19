@@ -662,5 +662,8 @@
 	background: inherit;
 	text-align: center;
 	line-height: 55px;
+	width: 33%;
+	float: left;
+	vertical-align: middle;
 	
 }

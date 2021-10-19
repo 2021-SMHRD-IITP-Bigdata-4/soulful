@@ -1,11 +1,11 @@
 // scss-lint:disable ImportantRule, QualifyingElement
 
-// Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/../resources/css/main.css
+// Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
 
 // ==========================================================================
 // Print styles.
 // Inlined to avoid the additional HTTP request:
-// http://www.phpied.com/delay-loading-your-print-../resources/css/
+// http://www.phpied.com/delay-loading-your-print-css/
 // ==========================================================================
 
 @if $enable-print-styles {

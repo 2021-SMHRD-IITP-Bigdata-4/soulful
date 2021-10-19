@@ -66,4 +66,14 @@ public class HomeController {
    	public String trackDetail(){ 
        	return "trackDetail";	
    	}
+    
+    @GetMapping("/search.do")
+   	public String search(){ 
+       	return "search";
+       	
+   	}
+    @GetMapping("/artistdetail.do")
+   	public String artistdetail(){ 
+       	return "artistdetail";
+    }
 }

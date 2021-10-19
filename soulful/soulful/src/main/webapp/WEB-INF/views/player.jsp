@@ -1,3 +1,8 @@
+<%@page import="java.util.List"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +22,13 @@
   <link rel="shortcut icon" sizes="196x196" href="resources/images/logo.png">
   
   <!-- style -->
-  <link rel="stylesheet" href="resources/css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="resources/css/glyphicons.css" type="text/css" />
-  <link rel="stylesheet" href="resources/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="resources/css/material-design-icons.css" type="text/css" />
-  <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/animate.css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="resources/css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
 
-  <!-- build:css resources/css/styles/app.min.css -->
+  <!-- build:css css/styles/app.min.css -->
   <link rel="stylesheet" href="resources/css/styles/app.css" type="text/css" />
   <link rel="stylesheet" href="resources/css/styles/style.css" type="text/css" />
   <link rel="stylesheet" href="resources/css/styles/font.css" type="text/css" />
@@ -79,7 +84,7 @@
 				</a>
 			  </li>
 			  <li>
-				<a href="browse.html">
+				<a href="browse.do">
 				  <span class="nav-icon">
 					<i class="material-icons">
 					  sort
@@ -138,7 +143,7 @@
 				</a>
 			  </li>
 			  <li>
-				<a href="profile.html#playlists">
+				<a href="profile.html#gasa">
 				  <span class="nav-icon">
 					<i class="material-icons">
 						book
@@ -151,11 +156,7 @@
 				<a href="profile.html#profile">
 				  <span class="nav-icon">
 					<i class="material-icons">
-<<<<<<< HEAD
 						account_circle
-=======
-					  favor\ite_border
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-4/soulful.git
 					</i>
 				  </span>
 				  <span class="nav-text">내 정보</span>
@@ -289,15 +290,15 @@
 		  </div>
     <div class="app-footer app-player grey bg">
       <div class="playlist" style="width:100%"></div>
-	  <div class="bottom-menu" style="width:100%">
-		<div style="float: left; width: 33%; text-align: center;"> <i class="material-icons" style="margin-right: 5px;">
+	 <div>
+		<div style="padding: 5px 0 5px background: inherit; text-align: center; line-height: 55px; width: 33%; float: left; "> <i class="material-icons" style="margin-right: 5px;">
 			view_list
 			</i><a href="profile.html#tracks">나의 앨범</a></div>
 			
-		<div style="float: left; width: 33%; text-align: center; "> <i class="material-icons" style="margin-right: 5px;">
+		<div style="padding: 5px 0 5px background: inherit; text-align: center; line-height: 55px; width: 33%; float: left; "> <i class="material-icons" style="margin-right: 5px;">
 			audiotrack
 			</i><a href="profile.html#playlists">재생 목록</a></div>
-		<div style="float: left; width: 33%; text-align: center;"><i class="material-icons" style="margin-right: 5px;">
+		<div style="padding: 5px 0 5px background: inherit; text-align: center; line-height: 55px; width: 33%; float: left; "><i class="material-icons" style="margin-right: 5px;">
 			book
 			</i><a href="profile.html#gasa"></href>가사 모음집</a></div>
 	</div>

@@ -44,8 +44,8 @@
       $('[data-target="container"] input').prop('checked', app.setting.container);
       
       if(color != app.setting.color){
-        uiLoad.remove('../resources/css/theme/'+color+'.css');
-        uiLoad.load('../resources/css/theme/'+app.setting.color+'.css');
+        uiLoad.remove('css/theme/'+color+'.css');
+        uiLoad.load('css/theme/'+app.setting.color+'.css');
         color = app.setting.color;
       }
     }
