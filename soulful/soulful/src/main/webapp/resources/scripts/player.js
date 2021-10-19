@@ -46,7 +46,7 @@
             "title": "Pull Up",
             "except": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Nihil illinc huc pervenit.",
             "link": "track.detail.html",
-            "thumb": { "src": "images/b0.jpg" },
+            "thumb": { "src": "resources/images/b0.jpg" },
             "src": "http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c",
             "meta": {
                 "author": "Summerella",
@@ -64,7 +64,7 @@
             "title": "Fireworks",
             "except": "Hidem saepe faciamus. Quid ad utilitatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.",
             "link": "track.detail.html",
-            "thumb": { "src": "images/b1.jpg" },
+            "thumb": { "src": "resources/images/b1.jpg" },
             "src": "http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c",
             "meta": {
                 "author": "Kygo",
@@ -81,7 +81,7 @@
             "title": "I Wanna Be In the Cavalry",
             "except": "Tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.",
             "link": "track.detail.html",
-            "thumb": { "src": "images/b2.jpg" },
+            "thumb": { "src": "resources/images/b2.jpg" },
             "src": "http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c",
             "meta": {
                 "author": "Jeremy Scott",

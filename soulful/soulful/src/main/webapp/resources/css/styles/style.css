@@ -1,27 +1,27 @@
 .brand-animate {
-    -webkit-animation: rotate 1s infinite linear;
-    animation: rotate 1s infinite linear;
+  -webkit-animation: rotate 1s infinite linear;
+  animation: rotate 1s infinite linear;
 
-    transform-origin: 24px 24px;
-    -webkit-transform-origin: 24px 24px;
+  transform-origin: 24px 24px;
+  -webkit-transform-origin: 24px 24px;
 
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 
-    -webkit-transition: all 0.3s ease-in-out;
-  	transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
 }
 
-.pace-running .brand-animate{
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
+.pace-running .brand-animate {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
 }
 
-.pace-done .brand-animate{
-    opacity: 0;
+.pace-done .brand-animate {
+  opacity: 0;
 }
 
 @-webkit-keyframes rotate {

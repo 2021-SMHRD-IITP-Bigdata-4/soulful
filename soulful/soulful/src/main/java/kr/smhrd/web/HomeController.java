@@ -23,7 +23,10 @@ public class HomeController {
 	public String player(){ 
 		return "player";
 	}
-
+	@RequestMapping("/player_1.do")
+	public String player_1(){ 
+		return "player_1";
+	}
     @GetMapping("/artist.do")
 	public String artist(){ 
     	return "artist";	
@@ -63,4 +66,14 @@ public class HomeController {
    	public String trackDetail(){ 
        	return "trackDetail";	
    	}
+    
+    @GetMapping("/search.do")
+   	public String search(){ 
+       	return "search";
+       	
+   	}
+    @GetMapping("/artistdetail.do")
+   	public String artistdetail(){ 
+       	return "artistdetail";
+    }
 }

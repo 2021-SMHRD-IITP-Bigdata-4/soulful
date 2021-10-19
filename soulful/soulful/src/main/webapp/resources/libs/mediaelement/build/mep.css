@@ -343,7 +343,7 @@
 
 .mejs-controls .mejs-playpause-button button{
 	border: 0;
-	background-color: #02b875;
+	background-color: #a88add;
 	-webkit-transition: all 0.3s;
     transition: all 0.3s;
 	border-radius: 100%;
@@ -402,7 +402,7 @@
 }
 .mejs-controls .mejs-time-rail .mejs-time-current{
 	opacity: 1;
-	border-color: #02b875;
+	border-color: #a88add;
 }
 
 .mejs-controls .mejs-button{
@@ -653,4 +653,17 @@
   	min-width: auto;
   	right: 120px;
   }
+}
+
+
+.bottom-menu{
+	padding: 5px 0 5px 0;
+	min-height: 3.4375rem;
+	background: inherit;
+	text-align: center;
+	line-height: 55px;
+	width: 33%;
+	float: left;
+	vertical-align: middle;
+	
 }
