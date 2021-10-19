@@ -151,7 +151,11 @@
 				<a href="profile.html#profile">
 				  <span class="nav-icon">
 					<i class="material-icons">
+<<<<<<< HEAD
 						account_circle
+=======
+					  favor\ite_border
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-4/soulful.git
 					</i>
 				  </span>
 				  <span class="nav-text">내 정보</span>
