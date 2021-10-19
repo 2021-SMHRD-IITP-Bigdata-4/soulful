@@ -3,6 +3,30 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
+	<!-- UTF-8 인코딩 설정 --> 
+<filter> 
+        <!-- filter안에는 filter-name, filter-class, init-param을 추가해 준다.
+              filter-name은 원하는대로 지정해도됨 -->
+        <filter-name>encodingFilter</filter-name> 
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param> 
+            <!-- encoidng값을 UTF-8로 만들어 준다. -->
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+
+    
+    
+    
+    
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>

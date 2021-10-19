@@ -10,23 +10,23 @@
   <!-- for ios 7 style, multi-resolution icon of 152x152 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
-  <link rel="apple-touch-icon" href="images/logo.png">
+  <link rel="apple-touch-icon" href="../resources/images/logo.png">
   <meta name="apple-mobile-web-app-title" content="Flatkit">
   <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" sizes="196x196" href="images/logo.png">
+  <link rel="shortcut icon" sizes="196x196" href="../resources/images/logo.png">
   
   <!-- style -->
-  <link rel="stylesheet" href="css/animate.css/animate.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/glyphicons/glyphicons.css" type="text/css" />
-  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="css/material-design-icons/material-design-icons.css" type="text/css" />
-  <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="../resources/css/animate.../resources/css/animate.min.css" type="text/css" />
+  <link rel="stylesheet" href="../resources/css/glyphicons/glyphicons.css" type="text/css" />
+  <link rel="stylesheet" href="../resources/css/font-awesome/../resources/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="../resources/css/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="../resources/css/bootstrap/dist/../resources/css/bootstrap.min.css" type="text/css" />
 
-  <!-- build:css css/styles/app.min.css -->
-  <link rel="stylesheet" href="css/styles/app.css" type="text/css" />
-  <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
-  <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+  <!-- build:css ../resources/css/styles/app.min.css -->
+  <link rel="stylesheet" href="../resources/css/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="../resources/css/styles/style.css" type="text/css" />
+  <link rel="stylesheet" href="../resources/css/styles/font.css" type="text/css" />
   
   <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css" type="text/css" />
   <link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.theme.css" type="text/css" />
@@ -56,7 +56,7 @@
         		<circle cx="24" cy="24" r="3" fill="#000000"/>
         	</svg>
         
-        	<img src="images/logo.png" alt="." class="hide">
+        	<img src="../resources/images/logo.png" alt="." class="hide">
         	<span class="hidden-folded inline">SoulFull</span>
         </a>
         <!-- / brand -->
@@ -133,7 +133,7 @@
 						list
 					  </i>
 					</span>
-					<span class="nav-text">나의 음악목록</span>
+					<span class="nav-text">나의 앨범</span>
 				  </a>
 				</li>
 				<li>
@@ -209,7 +209,7 @@
         <div class="nav-fold dropup">
           <a data-toggle="dropdown">
               <span class="pull-left">
-                <img src="images/a3.jpg" alt="..." class="w-32 img-circle">
+                <img src="../resources/images/a3.jpg" alt="..." class="w-32 img-circle">
               </span>
               <span class="clear hidden-folded p-x p-y-xs">
                 <span class="block _500 text-ellipsis">Rachel Platten</span>
@@ -256,7 +256,7 @@
         		<circle cx="24" cy="24" r="3" fill="#000000"/>
         	</svg>
         
-        	<img src="images/logo.png" alt="." class="hide">
+        	<img src="../resources/images/logo.png" alt="." class="hide">
         	<span class="hidden-folded inline">SoulFull</span>
         </a>
         <!-- / brand -->
@@ -318,7 +318,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a4.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a4.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -331,7 +331,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a3.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a3.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -344,7 +344,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a1.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a1.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -357,7 +357,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a6.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a6.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -370,7 +370,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a0.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a0.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -383,7 +383,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a8.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a8.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -396,7 +396,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a2.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a2.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -409,7 +409,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/b0.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/b0.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -422,7 +422,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/b1.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/b1.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -435,7 +435,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a9.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a9.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -448,7 +448,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a5.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a5.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -461,7 +461,7 @@
                 <div class="col-xs-4 col-sm-4 col-md-3">
                 	<div class="item">
             			<div class="item-media rounded ">
-            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a7.jpg');"></a>
+            				<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a7.jpg');"></a>
             			</div>
             			<div class="item-info text-center">
             				<div class="item-title text-ellipsis">
@@ -484,7 +484,7 @@
       		    <div class="col-xs-12">
       		    	<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
       					<div class="item-media ">
-      						<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+      						<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b6.jpg');"></a>
       					</div>
       					<div class="item-info">
       						<div class="item-title text-ellipsis">
@@ -501,7 +501,7 @@
       		    <div class="col-xs-12">
       		    	<div class="item r" data-id="item-9" data-src="http://api.soundcloud.com/tracks/264094434/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
       					<div class="item-media ">
-      						<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b8.jpg');"></a>
+      						<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b8.jpg');"></a>
       					</div>
       					<div class="item-info">
       						<div class="item-title text-ellipsis">
@@ -518,7 +518,7 @@
       		    <div class="col-xs-12">
       		    	<div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
       					<div class="item-media ">
-      						<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b9.jpg');"></a>
+      						<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b9.jpg');"></a>
       					</div>
       					<div class="item-info">
       						<div class="item-title text-ellipsis">
@@ -535,7 +535,7 @@
       		    <div class="col-xs-12">
       		    	<div class="item r" data-id="item-1" data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
       					<div class="item-media ">
-      						<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b0.jpg');"></a>
+      						<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b0.jpg');"></a>
       					</div>
       					<div class="item-info">
       						<div class="item-title text-ellipsis">
@@ -552,7 +552,7 @@
       		    <div class="col-xs-12">
       		    	<div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
       					<div class="item-media ">
-      						<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b4.jpg');"></a>
+      						<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b4.jpg');"></a>
       					</div>
       					<div class="item-info">
       						<div class="item-title text-ellipsis">
@@ -691,7 +691,7 @@
 						<div class="col-xs-12">
 							<div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media ">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b2.jpg');"></a>
+									<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b2.jpg');"></a>
 								</div>
 								<div class="item-info">
 									<div class="item-title text-ellipsis">
@@ -710,7 +710,7 @@
 						<div class="col-xs-12">
 							<div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media ">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b5.jpg');"></a>
+									<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b5.jpg');"></a>
 								</div>
 								<div class="item-info">
 									<div class="item-title text-ellipsis">
@@ -729,7 +729,7 @@
 						<div class="col-xs-12">
 							<div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media ">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b1.jpg');"></a>
+									<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b1.jpg');"></a>
 								</div>
 								<div class="item-info">
 									<div class="item-title text-ellipsis">
@@ -748,7 +748,7 @@
 						<div class="col-xs-12">
 							<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media ">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('images/b6.jpg');"></a>
+									<a href="track.detail.html" class="item-media-content" style="background-image: url('../resources/images/b6.jpg');"></a>
 								</div>
 								<div class="item-info">
 									<div class="item-title text-ellipsis">
@@ -771,7 +771,7 @@
 						<div class="col-xs-12">
 							<div class="item">
 								<div class="item-media rounded ">
-									<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a7.jpg');"></a>
+									<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a7.jpg');"></a>
 								</div>
 								<div class="item-info ">
 									<div class="item-title text-ellipsis">
@@ -784,7 +784,7 @@
 						<div class="col-xs-12">
 							<div class="item">
 								<div class="item-media rounded ">
-									<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a3.jpg');"></a>
+									<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a3.jpg');"></a>
 								</div>
 								<div class="item-info ">
 									<div class="item-title text-ellipsis">
@@ -797,7 +797,7 @@
 						<div class="col-xs-12">
 							<div class="item">
 								<div class="item-media rounded ">
-									<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a5.jpg');"></a>
+									<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a5.jpg');"></a>
 								</div>
 								<div class="item-info ">
 									<div class="item-title text-ellipsis">
@@ -810,7 +810,7 @@
 						<div class="col-xs-12">
 							<div class="item">
 								<div class="item-media rounded ">
-									<a href="artist.detail.html" class="item-media-content" style="background-image: url('images/a4.jpg');"></a>
+									<a href="artist.detail.html" class="item-media-content" style="background-image: url('../resources/images/a4.jpg');"></a>
 								</div>
 								<div class="item-info ">
 									<div class="item-title text-ellipsis">
