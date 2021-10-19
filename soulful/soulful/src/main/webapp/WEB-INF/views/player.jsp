@@ -168,7 +168,7 @@
 				<a href="profile.html#profile">
 				  <span class="nav-icon">
 					<i class="material-icons">
-					  favorite_border
+					  favor\ite_border
 					</i>
 				  </span>
 				  <span class="nav-text">내정보</span>

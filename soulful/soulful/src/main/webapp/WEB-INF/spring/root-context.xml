@@ -17,7 +17,7 @@
 			value="com.mysql.jdbc.Driver">
 		</property>
 		<property name="jdbcUrl"
-			value="jdbc:mysql://localhost:3306/mysql"></property>
+			value="jdbc:mysql://localhost:3306/mysql?characterEncoding=UTF-8&amp;serverTimezone=UTC"></property>
 			<property name="username" value="root"></property>
 			<property name="password" value="12345"></property>
 	</bean>	
@@ -27,11 +27,18 @@
 		destroy-method="close">
 		<constructor-arg ref="hikariConfig"/>
 		</bean>
-		
-		<!-- mybatis와 Spring이 연동할 api 설정 -->
+	
+	<!-- mybatis와 Spring이 연동할 api 설정 -->
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean">
-      <property name="dataSource" ref="dataSource"/>   
+      <property name="dataSource" ref="dataSource"/> 
+   	  <!-- 추가 부분 -->
+   	  <property name="configLocation" value="classpath:/mybatis-config.xml"></property>
    </bean>
-		
+   
+	<!-- 추가  mybatis SqlSessionFactoryBean -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
 	<mybatis-spring:scan base-package="kr.smhrd.mapper"/>
 </beans>
