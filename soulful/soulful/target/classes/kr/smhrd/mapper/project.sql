@@ -1,1 +1,1 @@
-select * from myplaylists;
+select * from members;
