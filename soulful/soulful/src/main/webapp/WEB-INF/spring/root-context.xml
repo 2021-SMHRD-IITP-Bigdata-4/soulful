@@ -15,10 +15,11 @@
 	    <!-- 프로퍼티가 속성이다! -->
 		<property name="driverClassName" 
 			value="com.mysql.jdbc.Driver">
+			
 		</property>
 		<property name="jdbcUrl"
-			value="jdbc:mysql://localhost:3306/mysql?characterEncoding=UTF-8&amp;serverTimezone=UTC"></property>
-			<property name="username" value="root"></property>
+			value="jdbc:mysql://project-db-stu.ddns.net:3307/campus_E_4_1022/mysql?characterEncoding=UTF-8&amp;serverTimezone=UTC"></property>
+			<property name="username" value="soulful"></property>
 			<property name="password" value="12345"></property>
 	</bean>	
 		

@@ -122,7 +122,7 @@
 			  <li>
 				<a href="profile.html#tracks">
 				  <span class="nav-label">
-					<b class="label">8</b>
+					<b cla...ss="label">8</b>
 				  </span>
 				  <span class="nav-icon">
 					<i class="material-icons">
