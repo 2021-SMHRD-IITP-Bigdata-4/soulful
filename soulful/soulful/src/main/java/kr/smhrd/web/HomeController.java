@@ -25,9 +25,9 @@ import kr.smhrd.mapper.CommentsVO;
 public class HomeController {
 	
 	// @Autowired //DI
-	/*@Inject
-	private Mainmapper mapper;
-	*/
+	@Inject
+	//private Mainmapper mapper;
+	
 	@RequestMapping("/player.do")
 	public String player(){ 
 		return "player";
@@ -42,8 +42,8 @@ public class HomeController {
 	}
     
     
-    //ㅡㅡㅡㅡ 20일 추가 _ 사용자 코멘트 ㅡㅡㅡㅡ
-    /*@GetMapping("/commentList.do")
+   /* //ㅡㅡㅡㅡ 20일 추가 _ 사용자 코멘트 ㅡㅡㅡㅡ
+    @GetMapping("/commentList.do")
     public String commentList(Model model) {
     	List<CommentsVO> list = mapper.commentsList();
     	model.addAttribute("list", list);
@@ -71,9 +71,9 @@ public class HomeController {
 	public String commentsDelete(int comm_seq) {
 		mapper.commentsDelete(comm_seq);
 		return "redirect:/commentsList.do";
-	}*/
+	}
 	//ㅡㅡㅡㅡ 20일 추가 _ 사용자 코멘트 ㅡㅡㅡㅡ
-    
+    */
 	
     @GetMapping("/browse.do")
 	public String browse(){ 

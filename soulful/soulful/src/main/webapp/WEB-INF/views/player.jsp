@@ -68,7 +68,7 @@
         	<span class="hidden-folded inline">SoulFull</span>
         </a>
         <!-- / brand -->
-	</div>
+	</div> 	
 	<div data-flex class="hide-scroll">
 		<nav class="scroll nav-stacked nav-active-primary">
 		  
