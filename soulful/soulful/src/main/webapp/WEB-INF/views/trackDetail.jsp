@@ -388,7 +388,9 @@
   
 <div class="page-content">
   <div class="padding b-b">
+    <div class="col-lg-9 b-r no-border-md">
     <div class="row-col">
+    
         <div class="col-sm w w-auto-xs m-b">
           <div class="item w r">
             <div class="item-media">
@@ -413,11 +415,7 @@
     <div class="col-lg-9 b-r no-border-md">
       <div class="padding">
 
-          <h6 class="m-b">
-            <span class="text-muted">by</span> 
-            <a href="artist.detail.html" data-pjax class="item-author _600">Rachel Platten</a> 
-            <span class="text-muted text-sm">- 10 song, 50 min 32 sec</span>
-          </h6>
+          
           <div id="tracks" class="row item-list item-list-xs item-list-li m-b">
                 <div class="col-xs-12" data-toggle="modal" data-target="#play" class="nav-link">
                 
@@ -933,6 +931,7 @@
 
 <!-- ############ LAYOUT END-->
   </div>
+  </div>
 
 <!-- build:js resources/scripts/app.min.js -->
 <!-- jQuery -->
@@ -959,7 +958,7 @@
   <script src="resources/scripts/ui-device.js"></script>
   <script src="resources/scripts/ui-form.js"></script>
   <script src="resources/scripts/ui-nav.js"></script>
-  <script src="resources/scripts/ui-screenfull.js"></script>
+  <!-- <script src="resources/scripts/ui-screenfull.js"></script> -->
   <script src="resources/scripts/ui-scroll-to.js"></script>
   <script src="resources/scripts/ui-toggle-class.js"></script>
   <script src="resources/scripts/ui-taburl.js"></script>

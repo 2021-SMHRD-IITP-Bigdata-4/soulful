@@ -304,18 +304,15 @@
 <!-- ############ PAGE START-->
 
 <div class="page-content">
-<!-- 상단 타이틀
-	<div class="padding p-b-0">
-		<div class="page-title m-b">
-			<h1 class="inline m-a-0">R&B 추천</h1>
-		</div>
-	-->
+
 	<!--메인 내용 출력-->
+	
 	<div class="row-col">
 		<div class="col-lg-9 b-r no-border-md">
 		<div class="col-lg-9 b-r no-border-md">
 			<div class="padding">
-				<h5 class="widget-title h5 m-b">오늘의 추천음악</h5>
+				
+				<h5 class="widget-title h5 m-b">오늘의 추천리스트<span id="nowweather"></span></h5>
 				<div class="owl-carousel owl-theme owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
 					margin: 20,
 					responsiveClass:true,
@@ -715,13 +712,17 @@
 		<a data-dismiss="modal" class="text-muted text-lg p-x modal-close-btn">&times;</a>
 			<div style="position: static; width: 100%; height: 50%; text-align: center;"><h3>지금 기분 어떠신가요?</h3>
 				<div style="width: 100%; height: 20px;"></div>
-				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji1.png"alt="Nothing" width="80px" height="80px"><br>기쁨</button>
-				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji2.png"alt="Nothing" width="80px" height="80px"><br>슬픔</button>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji1.png"alt="Nothing" width="80px" height="80px"><br>기뻐요</button>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji2.png"alt="Nothing" width="80px" height="80px"><br>슬퍼요</button>
 				<div style="width: 100%; height: 20px;"></div> 
-				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji3.png"alt="Nothing" width="80px" height="80px"><br>편안</button>
-				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji4.png"alt="Nothing" width="80px" height="80px"><br>흥분</button>
-			
-			
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji3.png"alt="Nothing" width="80px" height="80px"><br>편안해요</button>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji4.png"alt="Nothing" width="80px" height="80px"><br>센치해요</button>
+				<div style="width: 100%; height: 20px;"></div> 
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji3.png"alt="Nothing" width="80px" height="80px"><br>흥분돼요</button>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji4.png"alt="Nothing" width="80px" height="80px"><br>스트레스</button>
+				<div style="width: 100%; height: 20px;"></div> 
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji3.png"alt="Nothing" width="80px" height="80px"><br>기대돼요</button>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji4.png"alt="Nothing" width="80px" height="80px"><br>답답해요</button>
 			
 			</div>
 			<div style="width: 100%; height: 30%; position: static;">
@@ -771,7 +772,7 @@
   <script src="resources/scripts/ui-device.js"></script>
   <script src="resources/scripts/ui-form.js"></script>
   <script src="resources/scripts/ui-nav.js"></script>
-  <script src="resources/scripts/ui-screenfull.js"></script>
+ <script src="resources/scripts/ui-screenfull.js"></script>
   <script src="resources/scripts/ui-scroll-to.js"></script>
   <script src="resources/scripts/ui-toggle-class.js"></script>
   <script src="resources/scripts/ui-taburl.js"></script>
@@ -779,8 +780,8 @@
   <script src="resources/scripts/site.js"></script>
   <script src="resources/scripts/ajax.js"></script>
   <script src="resources/scripts/btn-slide.js"></script>
-  <script src="resources/scripts/graph.js"></script>
+ 
   <script src="resources/scripts/graph2.js"></script>
-  
+ 
 </body>
 </html>
