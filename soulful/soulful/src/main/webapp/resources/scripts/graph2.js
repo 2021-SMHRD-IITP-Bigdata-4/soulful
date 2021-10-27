@@ -107,6 +107,3 @@ let customLegend = function (chart) {
     return ul.outerHTML;
 };
 
-let nowweather = function(){
-	
-}
