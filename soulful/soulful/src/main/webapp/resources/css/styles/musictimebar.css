@@ -1,0 +1,130 @@
+.playlist1{
+	padding: 10px 0 5px 0;
+	min-height: 3.4375rem;
+	background: inherit;
+}
+
+.playlist1 .tracks{
+	counter-reset: li;
+	background: inherit;
+	position: absolute;
+	display: none;
+	bottom: 55px;
+	width: 480px;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	border: 1px solid rgba(120,120,120,0.15);
+	border-bottom-width: 0;
+	list-style: none;
+	max-height: 240px;
+	overflow-y: auto;
+}
+
+.playlis1 .tracks .track{
+	font-size: 12px;
+	padding: 10px 4px 11px 40px;
+	position: relative;
+	border-top: 1px solid rgba(110,120,130,0.15);
+}
+.playlist1 .tracks .track:first-child{
+	border-top-color: transparent;
+}
+
+.playlist1 .tracks .track-info{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.playlist1 .tracks .track:before{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -9px;
+	content: counter(li);
+	counter-increment: li;
+	text-align: center;
+	width: 40px;
+	display: inline-block;
+	opacity: 0.6;
+}
+
+.playlist1 .tracks .track.is-playing:before,
+.playlist1 .tracks .track.is-current:before{
+	font-family: FontAwesome;
+	content: '\f027';
+	opacity: 1;
+}
+
+.playlist1 .tracks .track-author{
+	opacity: 0.6;
+	margin-left: 10px;
+	font-size: 0.85em;
+}
+
+.playlist1 .tracks .track-action{
+	display: inline-block;
+	padding: 0 5px;
+	float: right;
+}
+
+.playlist1 .tracks .track-action .track-remove{
+	display: inline-block;
+	padding: 0 5px;
+	font-size: 1.6em;
+	opacity: 0.5;
+	line-height: 1;
+}
+
+.playlist1 .mejs-container{
+	background: transparent;
+	position: relative;
+	z-index: 1;
+}
+
+.playlist1 .mejs-video .mejs-mediaelement{
+	top: auto;
+	left: auto;
+	right: 0;
+	bottom: 100%;
+	width: 320px;
+	height: 180px;
+	z-index: 1;
+	margin: 0 0 10px 0;
+	display: none;
+}
+
+.playlist1 .mejs-video.video-open .mejs-mediaelement{
+	display: block;
+}
+
+.playlist1 .mejs-mediaelement iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.playlist1 .mejs-layers {
+	width: 20%;
+	position: absolute;
+	left: 0;
+	z-index: 1;
+	min-width: 240px;
+}
+
+.playlist1 .mejs-overlay-loading{
+	display: none;
+}
+.playlist1 .mejs-overlay-loading span,
+.playlist1 .mejs-overlay-button{
+	background-image: none;
+}
+
+.playlist1 .mejs-container .mejs-controls {
+	padding: 0;
+	height: 40px;
+	background: transparent;
+	clip: auto;
+	display: block !important;
+	opacity: 1 !important;
+}
