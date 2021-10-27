@@ -785,7 +785,7 @@ a.list-group-item.hover {
 
 .modal-close-btn {
   position: absolute;
-  top: 0;
+  top: 0.5rem;
   right: 0;
 }
 
@@ -3296,7 +3296,7 @@ body {
 
 .item-info {
   position: relative;
-  padding: 10px 0 20px 0;
+  padding: 10px 0 10px 0;
   border-radius: inherit;
 }
 .item-info .bottom {
@@ -3518,7 +3518,7 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  margin-top: -12px;
+  margin-top: -9px;
   content: counter(li);
   counter-increment: li;
   text-align: center;
@@ -7727,7 +7727,7 @@ fieldset[disabled] .md-switch input + i:after {
     right: 0px;
     top: 0px;
     z-index: 1;
-    background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/../resources/images/menu.png");
+    background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/resources/images/menu.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -7740,7 +7740,7 @@ fieldset[disabled] .md-switch input + i:after {
     position: absolute;
     right: 0px;
     top: 0px;
-    background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/../resources/images/close.png");
+    background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/resources/images/close.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -7781,5 +7781,34 @@ fieldset[disabled] .md-switch input + i:after {
     z-index: 4;
     display: none;
   }
+}
+
+.text-lg1 {
+  font-size: 2rem;
+}
+
+
+
+
+.legend-div {
+ 
+  margin: 10px;
+  left: 320px;
+}
+
+.legend-div ul li {
+  margin: 15px 0;
+  color: whitesmoke;
+  
+}
+
+.legend-div ul li span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 

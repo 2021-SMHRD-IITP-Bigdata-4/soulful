@@ -1,10 +1,10 @@
 // lazyload config
 var MODULE_CONFIG = {
     screenfull:     [
-                      'resources/libs/screenfull/dist/screenfull.min.js'
+                      '/libs/screenfull/dist/screenfull.min.js'
                     ],
     stick_in_parent:[
-                      'resources/libs/sticky-kit/jquery.sticky-kit.min.js'
+                      '/libs/sticky-kit/jquery.sticky-kit.min.js'
                     ]
   };
   

@@ -37,6 +37,9 @@
   <link rel="stylesheet" href="resources/libs/owl.carousel/dist/assets/owl.theme.css" type="text/css" />
   <link rel="stylesheet" href="resources/libs/mediaelement/build/mediaelementplayer.min.css" type="text/css" />
   <link rel="stylesheet" href="resources/libs/mediaelement/build/mep.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+ 
 
   <!-- endbuild -->
 </head>
@@ -51,7 +54,7 @@
     <div class="left navside dark dk" data-layout="column">
       <div class="navbar no-radius">
         <!-- brand -->
-        <a href="player.html" class="navbar-brand md">
+        <a href="player.do" class="navbar-brand md">
         	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
         		<circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
         		<circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
@@ -74,7 +77,7 @@
 				<span class="text-xs text-muted">Main</span>
 			  </li>
 			  <li>
-				<a href="player.html">
+				<a href="player.do">
 				  <span class="nav-icon">
 					<i class="material-icons">
 					  play_circle_outline
@@ -84,7 +87,7 @@
 				</a>
 			  </li>
 			  <li>
-				<a href="browse.do">
+				<a href="browse.html">
 				  <span class="nav-icon">
 					<i class="material-icons">
 					  sort
@@ -122,7 +125,7 @@
 			  <li>
 				<a href="profile.html#tracks">
 				  <span class="nav-label">
-					<b cla...ss="label">8</b>
+					<b class="label">8</b>
 				  </span>
 				  <span class="nav-icon">
 					<i class="material-icons">
@@ -242,7 +245,7 @@
     <div class="app-header hidden-lg-up dark lt box-shadow-z1">
         <div class="navbar">
         <!-- brand -->
-        <a href="player.html" class="navbar-brand md">
+        <a href="player.do" class="navbar-brand md">
         	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
         		<circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
         		<circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
@@ -290,18 +293,9 @@
 		  </div>
     <div class="app-footer app-player grey bg">
       <div class="playlist" style="width:100%"></div>
-	 <div>
-		<div style="padding: 5px 0 5px background: inherit; text-align: center; line-height: 55px; width: 33%; float: left; "> <i class="material-icons" style="margin-right: 5px;">
-			view_list
-			</i><a href="profile.html#tracks">나의 앨범</a></div>
-			
-		<div style="padding: 5px 0 5px background: inherit; text-align: center; line-height: 55px; width: 33%; float: left; "> <i class="material-icons" style="margin-right: 5px;">
-			audiotrack
-			</i><a href="profile.html#playlists">재생 목록</a></div>
-		<div style="padding: 5px 0 5px background: inherit; text-align: center; line-height: 55px; width: 33%; float: left; "><i class="material-icons" style="margin-right: 5px;">
-			book
-			</i><a href="profile.html#gasa"></href>가사 모음집</a></div>
-	</div>
+	  
+	 
+	
 </div>
     
 	
@@ -321,8 +315,8 @@
 		<div class="col-lg-9 b-r no-border-md">
 		<div class="col-lg-9 b-r no-border-md">
 			<div class="padding">
-				<h5 class="widget-title h5 m-b">오늘의 추천 플레이리스트</h5>
-				<div class="owl-carousel owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
+				<h5 class="widget-title h5 m-b">오늘의 추천음악</h5>
+				<div class="owl-carousel owl-theme owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
 					margin: 20,
 					responsiveClass:true,
 				    responsive:{
@@ -337,23 +331,15 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
-									<div class="item-overlay center">
-										<button  class="btn-playpause">Play</button>
-									</div>
+									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
+									
 								</div>
 								<div class="item-info">
-									<div class="item-overlay bottom text-right">
-										<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-										<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-										<div class="dropdown-menu pull-right black lt"></div>
-									</div>
+									
 									<div class="item-title text-ellipsis">
-										<a href="track.detail.html">Live Radio</a>
+										<a href="">Live Radio</a>
 									</div>
-									<div class="item-author text-sm text-ellipsis ">
-										<a href="artist.detail.html" class="text-muted">Radionomy</a>
-									</div>
+									
 					
 					
 								</div>
@@ -362,23 +348,15 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
-									<div class="item-overlay center">
-										<button  class="btn-playpause">Play</button>
-									</div>
+									<a href="track.detail.do" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
+									
 								</div>
 								<div class="item-info">
-									<div class="item-overlay bottom text-right">
-										<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-										<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-										<div class="dropdown-menu pull-right black lt"></div>
-									</div>
+									
 									<div class="item-title text-ellipsis">
-										<a href="track.detail.html">Reflection (Deluxe)</a>
+										<a href="trackDetail.do">Reflection (Deluxe)</a>
 									</div>
-									<div class="item-author text-sm text-ellipsis ">
-										<a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
-									</div>
+									
 					
 					
 								</div>
@@ -387,23 +365,15 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-11" data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b10.jpg');"></a>
-									<div class="item-overlay center">
-										<button  class="btn-playpause">Play</button>
-									</div>
+									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b10.jpg');"></a>
+									
 								</div>
 								<div class="item-info">
-									<div class="item-overlay bottom text-right">
-										<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-										<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-										<div class="dropdown-menu pull-right black lt"></div>
-									</div>
+									
 									<div class="item-title text-ellipsis">
-										<a href="track.detail.html">Spring</a>
+										<a href="trackDetail.do">Spring</a>
 									</div>
-									<div class="item-author text-sm text-ellipsis ">
-										<a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
-									</div>
+									
 					
 					
 								</div>
@@ -412,23 +382,15 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
-									<div class="item-overlay center">
-										<button  class="btn-playpause">Play</button>
-									</div>
+									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
+								
 								</div>
 								<div class="item-info">
-									<div class="item-overlay bottom text-right">
-										<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-										<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-										<div class="dropdown-menu pull-right black lt"></div>
-									</div>
+									
 									<div class="item-title text-ellipsis">
-										<a href="track.detail.html">I Wanna Be In the Cavalry</a>
+										<a href="trackDetail.do">I Wanna Be In the Cavalry</a>
 									</div>
-									<div class="item-author text-sm text-ellipsis ">
-										<a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
-									</div>
+									
 					
 					
 								</div>
@@ -437,23 +399,15 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b9.jpg');"></a>
-									<div class="item-overlay center">
-										<button  class="btn-playpause">Play</button>
-									</div>
+									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b9.jpg');"></a>
+									
 								</div>
 								<div class="item-info">
-									<div class="item-overlay bottom text-right">
-										<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-										<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-										<div class="dropdown-menu pull-right black lt"></div>
-									</div>
+									
 									<div class="item-title text-ellipsis">
-										<a href="track.detail.html">The Open Road</a>
+										<a href="trackDetail.do">The Open Road</a>
 									</div>
-									<div class="item-author text-sm text-ellipsis ">
-										<a href="artist.detail.html" class="text-muted">Postiljonen</a>
-									</div>
+									
 					
 					
 								</div>
@@ -462,23 +416,15 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-4" data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b3.jpg');"></a>
-									<div class="item-overlay center">
-										<button  class="btn-playpause">Play</button>
-									</div>
+									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b3.jpg');"></a>
+									
 								</div>
 								<div class="item-info">
-									<div class="item-overlay bottom text-right">
-										<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-										<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-										<div class="dropdown-menu pull-right black lt"></div>
-									</div>
+									
 									<div class="item-title text-ellipsis">
-										<a href="track.detail.html">What A Time To Be Alive</a>
+										<a href="trackDetail.do">What A Time To Be Alive</a>
 									</div>
-									<div class="item-author text-sm text-ellipsis ">
-										<a href="artist.detail.html" class="text-muted">Judith Garcia</a>
-									</div>
+									
 					
 					
 								</div>
@@ -487,23 +433,15 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
-									<div class="item-overlay center">
-										<button  class="btn-playpause">Play</button>
-									</div>
+									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
+									
 								</div>
 								<div class="item-info">
-									<div class="item-overlay bottom text-right">
-										<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-										<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-										<div class="dropdown-menu pull-right black lt"></div>
-									</div>
+								
 									<div class="item-title text-ellipsis">
-										<a href="track.detail.html">Fireworks</a>
+										<a href="trackDetail.do">Fireworks</a>
 									</div>
-									<div class="item-author text-sm text-ellipsis ">
-										<a href="artist.detail.html" class="text-muted">Kygo</a>
-									</div>
+									
 					
 					
 								</div>
@@ -512,688 +450,65 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
-									<div class="item-overlay center">
-										<button  class="btn-playpause">Play</button>
-									</div>
+									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
+									
 								</div>
 								<div class="item-info">
-									<div class="item-overlay bottom text-right">
-										<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-										<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-										<div class="dropdown-menu pull-right black lt"></div>
-									</div>
+									
 									<div class="item-title text-ellipsis">
-										<a href="track.detail.html">Body on me</a>
+										<a href="trackDetail.do">Body on me</a>
 									</div>
-									<div class="item-author text-sm text-ellipsis ">
-										<a href="artist.detail.html" class="text-muted">Rita Ora</a>
-									</div>
+									
 					
 					
 								</div>
-							</div>
-						</div>
-				</div>
-				</div>
-			
-			
-						<div class="padding">
-							<h5 class="widget-title h5 m-b">가을에 어울릴 추천 리스트</h5>
-							<div class="owl-carousel owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
-								margin: 20,
-								responsiveClass:true,
-								responsive:{
-									0:{
-										items: 2
-									},
-									543:{
-										items: 3
-									}
-								}
-							}">
-									<div class="">
-										<div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Live Radio</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Radionomy</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Reflection (Deluxe)</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-11" data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b10.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Spring</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">I Wanna Be In the Cavalry</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b9.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">The Open Road</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Postiljonen</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-4" data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b3.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">What A Time To Be Alive</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Judith Garcia</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Fireworks</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Kygo</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Body on me</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Rita Ora</a>
-												</div>
-								
-								</div>
-											</div>
-										</div>
-									</div>
 							</div>
 							
-						<div class="padding">
-							<h5 class="widget-title h5 m-b">가을에 어울릴 추천 리스트</h5>
-							<div class="owl-carousel owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
-								margin: 20,
-								responsiveClass:true,
-								responsive:{
-									0:{
-										items: 2
-									},
-									543:{
-										items: 3
-									}
-								}
-							}">
-									<div class="">
-										<div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Live Radio</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Radionomy</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Reflection (Deluxe)</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-11" data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b10.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Spring</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">I Wanna Be In the Cavalry</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b9.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">The Open Road</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Postiljonen</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-4" data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b3.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">What A Time To Be Alive</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Judith Garcia</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Fireworks</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Kygo</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Body on me</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Rita Ora</a>
-												</div>
-								
-								</div>
-											</div>
-										</div>
-									</div>
-							</div>
-							<div class="padding">
-							<h5 class="widget-title h5 m-b">비오는 날 추천 리스트</h5>
-							<div class="owl-carousel owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
-								margin: 20,
-								responsiveClass:true,
-								responsive:{
-									0:{
-										items: 2
-									},
-									543:{
-										items: 3
-									}
-								}
-							}">
-									<div class="">
-										<div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Live Radio</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Radionomy</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Reflection (Deluxe)</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-11" data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b10.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Spring</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">I Wanna Be In the Cavalry</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b9.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">The Open Road</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Postiljonen</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-4" data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b3.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">What A Time To Be Alive</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Judith Garcia</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Fireworks</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Kygo</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-									<div class="">
-										<div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-											<div class="item-media item-media-4by3">
-												<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
-												<div class="item-overlay center">
-													<button  class="btn-playpause">Play</button>
-												</div>
-											</div>
-											<div class="item-info">
-												<div class="item-overlay bottom text-right">
-													<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-													<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-													<div class="dropdown-menu pull-right black lt"></div>
-												</div>
-												<div class="item-title text-ellipsis">
-													<a href="track.detail.html">Body on me</a>
-												</div>
-												<div class="item-author text-sm text-ellipsis ">
-													<a href="artist.detail.html" class="text-muted">Rita Ora</a>
-												</div>
-								
-								
-											</div>
-										</div>
-									</div>
-							</div>
 						</div>
-			</div>
-		</div>
+						
+				</div>
+				<div class="b-b m-y1"></div>
+				<div class="padding" style="width:100%; height: 200px;">
+					<div style="width: 50%; text-align: center; float: left;">
+						<div class="chart-div">
+							<canvas id="pieChartCanvas" width="150px" height="150px"></canvas>
+							
+						</div>
+						<h6 class="gg" style="text-align: center; margin-top: 12px; width: 150px;">감정 분석 결과</h6>
+					</div>
+					<div style="width: 50%; float:right;">
+						<div id='legend-div' class="legend-div">
+
+						</div>
+					</div>
+				</div>	
 		
-		<div class="col-lg-3 w-xxl w-auto-md">
-		  <div class="padding" style="bottom: 60px;" data-ui-jp="stick_in_parent">
-		  	
-		      <div class="b-b m-y"></div>
-		     
-		      
+		
+		
+		
+	
+				<div class="padding" style="width:100%; height: 200px;">
+					<div style="width: 50%; text-align: center; float: left;">
+						<div class="chart-div">
+							<canvas id="pieChartCanvas1" width="150px" height="150px"></canvas>
+							
+						</div>
+						<h6 class="gg" style="text-align: center; margin-top: 12px; width: 150px;">분위기 분석 결과</h6>
+					</div>
+					<div style="width: 50%; float:right;">
+						<div id='legend-div1' class="legend-div">
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="gg"style="text-align: center; width: 100%; height: 50px;" >
+				<button type="button" class="btn btn-fw primary" style="text-align: center; margin: 5px 0;">리스트 보기</button>
+				</div>
+		</div>
+	
+	</div>
 		  </div>
 		</div>
 	</div>
@@ -1232,11 +547,11 @@
                           <div class="col-xs-12">
                           	<div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                       			<div class="item-media ">
-                      				<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
+                      				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
                       			</div>
                       			<div class="item-info">
                       				<div class="item-title text-ellipsis">
-                      					<a href="track.detail.html">I Wanna Be In the Cavalry</a>
+                      					<a href="trackDetail.do">I Wanna Be In the Cavalry</a>
                       				</div>
                       				<div class="item-author text-sm text-ellipsis ">
                       					<a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
@@ -1251,11 +566,11 @@
                           <div class="col-xs-12">
                           	<div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                       			<div class="item-media ">
-                      				<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
+                      				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
                       			</div>
                       			<div class="item-info">
                       				<div class="item-title text-ellipsis">
-                      					<a href="track.detail.html">Body on me</a>
+                      					<a href="trackDetail.do">Body on me</a>
                       				</div>
                       				<div class="item-author text-sm text-ellipsis ">
                       					<a href="artist.detail.html" class="text-muted">Rita Ora</a>
@@ -1270,11 +585,11 @@
                           <div class="col-xs-12">
                           	<div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                       			<div class="item-media ">
-                      				<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
+                      				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
                       			</div>
                       			<div class="item-info">
                       				<div class="item-title text-ellipsis">
-                      					<a href="track.detail.html">Fireworks</a>
+                      					<a href="trackDetail.do">Fireworks</a>
                       				</div>
                       				<div class="item-author text-sm text-ellipsis ">
                       					<a href="artist.detail.html" class="text-muted">Kygo</a>
@@ -1289,11 +604,11 @@
                           <div class="col-xs-12">
                           	<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                       			<div class="item-media ">
-                      				<a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
+                      				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
                       			</div>
                       			<div class="item-info">
                       				<div class="item-title text-ellipsis">
-                      					<a href="track.detail.html">Reflection (Deluxe)</a>
+                      					<a href="trackDetail.do">Reflection (Deluxe)</a>
                       				</div>
                       				<div class="item-author text-sm text-ellipsis ">
                       					<a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
@@ -1400,11 +715,11 @@
 		<a data-dismiss="modal" class="text-muted text-lg p-x modal-close-btn">&times;</a>
 			<div style="position: static; width: 100%; height: 50%; text-align: center;"><h3>지금 기분 어떠신가요?</h3>
 				<div style="width: 100%; height: 20px;"></div>
-				<a href="player.html" style="margin: 15px;"><input type='image' name="imoji" value="happy" src="resources/images/imoji1.png" alt="Nothing" width="80px" height="80px"></a>
-				<a href="player.html"	style="margin: 15px;"><input type='image' name="imoji" value="sad" src="resources/images/imoji2.png"alt="Nothing" width="80px" height="80px"></a>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji1.png"alt="Nothing" width="80px" height="80px"><br>기쁨</button>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji2.png"alt="Nothing" width="80px" height="80px"><br>슬픔</button>
 				<div style="width: 100%; height: 20px;"></div> 
-				<a href="player.html" style="margin: 15px;"><input type='image' name="imoji" value="good" src="resources/images/imoji3.png"alt="Nothing" width="80px" height="80px"></a>
-				<a href="player.html" style="margin: 15px;"><input type='image' name="imoji" value="relexneed" src="resources/images/imoji4.png"alt="Nothing" width="80px" height="80px"></a>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji3.png"alt="Nothing" width="80px" height="80px"><br>편안</button>
+				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji4.png"alt="Nothing" width="80px" height="80px"><br>흥분</button>
 			
 			
 			
@@ -1425,47 +740,7 @@
   <!-- ############ imoji 이모지 끝 END -->
 
   <!-- ############ SHARE START -->
-  <div id="share-modal" class="modal fade animate">
-    <div class="modal-dialog">
-      <div class="modal-content fade-down">
-        <div class="modal-header">
   
-          <h5 class="modal-title">Share</h5>
-        </div>
-        <div class="modal-body p-lg">
-          <div id="share-list" class="m-b">
-            <a href="" class="btn btn-icon btn-social rounded btn-social-colored indigo" title="Facebook">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-facebook"></i>
-            </a>
-  
-            <a href="" class="btn btn-icon btn-social rounded btn-social-colored light-blue" title="Twitter">
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-twitter"></i>
-            </a>
-  
-            <a href="" class="btn btn-icon btn-social rounded btn-social-colored red-600" title="Google+">
-                <i class="fa fa-google-plus"></i>
-                <i class="fa fa-google-plus"></i>
-            </a>
-  
-            <a href="" class="btn btn-icon btn-social rounded btn-social-colored blue-grey-600" title="Trumblr">
-                <i class="fa fa-tumblr"></i>
-                <i class="fa fa-tumblr"></i>
-            </a>
-  
-            <a href="" class="btn btn-icon btn-social rounded btn-social-colored red-700" title="Pinterst">
-                <i class="fa fa-pinterest"></i>
-                <i class="fa fa-pinterest"></i>
-            </a>
-          </div>
-          <div>
-            <input class="form-control" value="http://plamusic.com/slug"/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <!-- ############ SHARE END -->
 
 <!-- ############ LAYOUT END-->
@@ -1504,6 +779,8 @@
   <script src="resources/scripts/site.js"></script>
   <script src="resources/scripts/ajax.js"></script>
   <script src="resources/scripts/btn-slide.js"></script>
-<!-- endbuild -->
+  <script src="resources/scripts/graph.js"></script>
+  <script src="resources/scripts/graph2.js"></script>
+  
 </body>
 </html>

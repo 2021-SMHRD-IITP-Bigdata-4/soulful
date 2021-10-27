@@ -19,15 +19,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.smhrd.mapper.CommentsVO;
-import kr.smhrd.mapper.Mainmapper;
+
 
 @Controller
 public class HomeController {
 	
 	// @Autowired //DI
-	@Inject
+	/*@Inject
 	private Mainmapper mapper;
-	
+	*/
 	@RequestMapping("/player.do")
 	public String player(){ 
 		return "player";
@@ -43,7 +43,7 @@ public class HomeController {
     
     
     //ㅡㅡㅡㅡ 20일 추가 _ 사용자 코멘트 ㅡㅡㅡㅡ
-    @GetMapping("/commentList.do")
+    /*@GetMapping("/commentList.do")
     public String commentList(Model model) {
     	List<CommentsVO> list = mapper.commentsList();
     	model.addAttribute("list", list);
@@ -71,7 +71,7 @@ public class HomeController {
 	public String commentsDelete(int comm_seq) {
 		mapper.commentsDelete(comm_seq);
 		return "redirect:/commentsList.do";
-	}
+	}*/
 	//ㅡㅡㅡㅡ 20일 추가 _ 사용자 코멘트 ㅡㅡㅡㅡ
     
 	
