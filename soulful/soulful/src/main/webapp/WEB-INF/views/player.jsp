@@ -1,7 +1,12 @@
-<%@page import="java.util.List"%>
-
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="java.util.List"%>
+=======
+<%@page import="java.util.List"%>
+
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-4/soulful.git
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +16,9 @@
   <meta name="description" content="Music, Musician, Bootstrap" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+
 
   <!-- for ios 7 style, multi-resolution icon of 152x152 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -42,8 +50,10 @@
  
 
   <!-- endbuild -->
+
 </head>
-<body>
+<body >
+
   <div class="app dk" id="app">
 
 <!-- ############ LAYOUT START-->
@@ -311,7 +321,7 @@
 		</div>
 	-->
 	<!--메인 내용 출력-->
-	<div class="row-col">
+	<div class="row-col">  
 		<div class="col-lg-9 b-r no-border-md">
 		<div class="col-lg-9 b-r no-border-md">
 			<div class="padding">
@@ -327,7 +337,9 @@
 				            items: 3
 				        }
 				    }
-				}">
+				}">		
+				
+
 					    <div class="">
 					    	<div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
 								<div class="item-media item-media-4by3">
@@ -779,8 +791,9 @@
   <script src="resources/scripts/site.js"></script>
   <script src="resources/scripts/ajax.js"></script>
   <script src="resources/scripts/btn-slide.js"></script>
-  <script src="resources/scripts/graph.js"></script>
-  <script src="resources/scripts/graph2.js"></script>
   
+  <script src="resources/scripts/graph2.js"></script>
+  <script src="resources/scripts/weather.js"></script>
+    
 </body>
 </html>
