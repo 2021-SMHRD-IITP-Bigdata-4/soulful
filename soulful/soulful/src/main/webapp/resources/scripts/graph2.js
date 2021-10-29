@@ -1,4 +1,4 @@
-// 가사 감정
+var result;
 window.onload = function () {
     pieChartDraw();
     document.getElementById('legend-div').innerHTML = window.pieChart.generateLegend();
@@ -7,7 +7,24 @@ window.onload = function () {
 	weather();
 	
 }
-
+function titlechange(){
+	var now_weather = result.weather[0].main;
+	if (now_weather == "Atmosphere"){
+		show_weather = "오늘처럼 흐린 날엔 이런 곡 어떤가요?";
+	}else if (now_weather == "Thunderstorm" ||now_weather == "Rain"){
+		show_weather = "비가 많이 오네요. 제 추천곡입니다.";
+	}else if (now_weather == "Clear" ||now_weather == "Clouds"){
+		show_weather = "날씨 좋네요! 이 노래와 함께 나가볼까요?";
+	}else if (now_weather == "Drizzle" ||now_weather == "Snow"){
+		show_weather = "센치해지는 날씨네요. 이 곡은 어때요?";
+	}
+	$('.widget-title.h6.m-b').text(show_weather);
+}
+//날씨 종류 : Thunderstorm, Drizzle, Rain, Snow, Atmosphere, Clear, Clouds  
+//Drizzle, Snow - 가랑비,눈 
+//Clouds,Atmosphere - 흐림 안개 비슷할것같고
+//Thunderstorm, Rain, - 천둥번개, 비 하나로 묶고
+//Clear 
 function weather() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(hzCoords);
@@ -35,10 +52,11 @@ function hzCoords(position) {
             console.log("바람   : "+ resp.wind.speed );
             console.log("나라   : "+ resp.sys.country );
             console.log("도시이름  : "+ resp.name );
-            console.log("구름  : "+ (resp.clouds.all) +"%" );                 
+            console.log("구름  : "+ (resp.clouds.all) +"%" );   
+            result = resp;
+            titlechange();
         }
-    })
-
+    });
 }
 
 

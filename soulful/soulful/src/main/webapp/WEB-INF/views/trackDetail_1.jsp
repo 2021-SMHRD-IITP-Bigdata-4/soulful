@@ -1,12 +1,9 @@
 <%@page import="java.util.List"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="kr.smhrd.mapper.SonginfosVO"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!--  server의 context path를 가지고 와서 path가 바뀔 때를 대비해보자!-->
-<c:set var="cpath" value= "${pageContext.request.contextPath}"/>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,47 +43,9 @@
   <link rel="stylesheet" href="resources/libs/mediaelement/build/mediaelementplayer.min.css" type="text/css" />
   <link rel="stylesheet" href="resources/libs/mediaelement/build/mep.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type = "text/javascript">
   
-  	function loadJson(){
-  		 $.ajax({
-    	       url : "${cpath}/songinfos_ListAjax.do",
-    	       type : "GET",
-    	       //data : {키:밸류   }   .을 찍어서 json 데이터를 핸들링한다.
-    	       dataType : "json",
-    	       success : ajaxhtml,  // 콜백함수다 얘가
-    	       error : function(){ alert("error");  }
-    	     });
-  	}
-  	function ajaxhtml(data){
-  		var html="<table class='table'>";
-		html+="<tr>";
-		html+="<td>제목</td>";
-		html+="<td>장르</td>";
-		html+="<td>가사감정</td>";
-		html+="<td>음원감정</td>";
-		html+="<td>가사 퍼센트</td>";
-		html+="<td>감정 퍼센트</td>";
-		
-		html+="</tr>";
-		// 반복문					// 이름없는 함수 익명 함수는 function을 쓰지 않고 저렇게 써도 작동된다.(람다식 함수이라 한다.)
-		$.each(data, (index, obj)=>{
-			html+="<tr>";
-  			html+="<td>"+obj.song_title+"</td>";
-  			html+="<td>"+obj.song_genre+"</td>";
-  			html+="<td>"+obj.lyric_emotion1+"</td>";
-  			html+="<td>"+obj.track_emotion+"</td>";
-  			html+="<td>"+obj.lyric_joy+"</td>";
-  			html+="<td>"+obj.track_joy+"</td>"
-  			html+="</tr>";
-		});
-		html+="</table>"
-		$("#msg").html(html);
-  	}
-	</script>
+ 
+
   <!-- endbuild -->
 </head>
 <body>
@@ -174,40 +133,6 @@
 
 		  </div>
   </div>
-<!--  여기까지가 슬라이드 -->
-
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">BOOK LIST</div>
-    <div class="panel-body">
-    	<table class = "table table-hover">
-			<tr>
-				<td>제목</td>
-				<td>장르</td>
-				<td>가사감정</td>
-				<td>음원감정</td>
-				<td>가사 퍼센트</td>
-				<td>음원 퍼센트</td>
-			</tr>    		
-				<!-- 반복문을 쓰기위해 c:를 쓴것이다. -->
-			<c:forEach var="vo" items="${songinfos_List}">  <!-- 이거 대신 저걸 사용 List<BoardVO> list = (List<BoardVO>)request.getAttribute("list"); -->
-    		<tr>
-				<td>${vo.song_title}</td>
-				<td>${vo.song_genre}</td>
-				<td>${vo.lyric_emotion1}</td>
-				<td>${vo.track_emotion}</td>
-				<td>${vo.lyric_joy}</td>
-				<td>${vo.track_joy}</td>
-			</tr> 
-			</c:forEach>
-    	</table>
-    	<button class="btn btn-success btn-sm" onclick="loadJson()">도서목록 가져오기</button>
-         <div id="msg">여기에 JSON데이터를 출력하시오.</div>
-    	
-</div>
-
-
-
 
  <!-- aside -->
  <div id="aside" class="app-aside modal fade nav-dropdown">
@@ -478,7 +403,7 @@
             <div class="page-title">
               <h1 class="inline h2">Simple Place To Be</h1>
             </div>
-   
+            <p class="item-desc text-ellipsis text-muted" data-ui-toggle-class="text-ellipsis" style="font-weight: lighter; line-height: 23px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Nihil illinc huc pervenit. Verum hoc idem saepe faciamus. Quid ad utilitatem tantae pecuniae? Utram tandem linguam nescio? Sed hoc sane concedamus.</p>
             
            
           </div>
@@ -489,12 +414,20 @@
   <div class="row-col">
     <div class="col-lg-9 b-r no-border-md">
       <div class="padding">
-		<div id="tracks" class="row item-list item-list-xs item-list-li m-b">
+
+          
+          <div id="tracks" class="row item-list item-list-xs item-list-li m-b">
                 <div class="col-xs-12" data-toggle="modal" data-target="#play" class="nav-link">
+                
+                 
+                  
                 	<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media "> </a>
-                       		<a href="#" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
-            					<div class="item-overlay center">
+            		
+                    <div class="item-media "> </a>
+                       
+                       
+            				<a href="#" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
+            				<div class="item-overlay center">
             					<button  class="btn-playpause">Play</button>
             				</div>
             			</div>
@@ -506,10 +439,11 @@
             				</div>
             				<div class="item-title text-ellipsis">
                       
-            					<a>Reflection (Deluxe)</a>
+            					<a href="#">Reflection (Deluxe)</a>
             				</div>
-            				
-            				
+            				<div class="item-author text-sm text-ellipsis hide">
+            					<a href="#" class="text-muted">Fifth Harmony</a>
+            				</div>
             				<div class="item-meta text-sm text-muted">
             		          <span class="item-meta-right">5:05</span>
             		        </div>

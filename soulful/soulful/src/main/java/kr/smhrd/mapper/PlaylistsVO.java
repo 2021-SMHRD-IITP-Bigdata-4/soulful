@@ -21,4 +21,19 @@ public class PlaylistsVO {
 		private Date reg_date;
 		private String song_list;
 		
+	    public int get_pl_seq() {
+	        return pl_seq;
+	    }
+
+	    public String get_pl_title() {
+	        return pl_title;
+	    }
+
+	    public String get_song_list() {
+	        return song_list;
+	    }
+
+
+
+		
 }

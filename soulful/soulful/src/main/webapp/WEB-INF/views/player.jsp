@@ -314,14 +314,14 @@
 <div class="page-content">
 
 	<!--메인 내용 출력-->
-	<div class="row-col">  
-	
+	<div class="row-col">
+
 	<div class="row-col">
 		<div class="col-lg-9 b-r no-border-md">
 		<div class="col-lg-9 b-r no-border-md">
 			<div class="padding">
 				
-				<h5 class="widget-title h5 m-b">오늘의 추천리스트<span id="nowweather"></span></h5>
+				<h5 class="widget-title h6 m-b">오늘의 추천리스트<span id="nowweather"></span></h5>
 				<div class="owl-carousel owl-theme owl-dots-center" data-ui-jp="owlCarousel" data-ui-options="{
 					margin: 20,
 					responsiveClass:true,
@@ -339,13 +339,13 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
 								<div class="item-media item-media-4by3">
-									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
+									<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/img_min.jpg');"></a>
 									
 								</div>
 								<div class="item-info">
 									
 									<div class="item-title text-ellipsis">
-										<a href="">Live Radio</a>
+										<a href="">맛집탐방 출바알!</a>
 									</div>
 									
 					
@@ -356,13 +356,13 @@
 					    <div class="">
 					    	<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
 								<div class="item-media item-media-4by3">
-									<a href="track.detail.do" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
+									<a href="track.detail.do" class="item-media-content" style="background-image: url('resources/images/img_min2.jpg');"></a>
 									
 								</div>
 								<div class="item-info">
 									
 									<div class="item-title text-ellipsis">
-										<a href="trackDetail.do">Reflection (Deluxe)</a>
+										<a href="trackDetail.do">세상에 이런 곡이!</a>
 									</div>
 									
 					
