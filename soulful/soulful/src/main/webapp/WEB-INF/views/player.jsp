@@ -60,7 +60,7 @@
   window.onload = function () {
       
   	weather();
-  	
+  	loadJson_all();
   }
   function titlechange(){
   	var now_weather = result.weather[0].main;
@@ -120,15 +120,45 @@
 
 
 
-
+  
+  function loadJson_all(){
+	 		// 서버에 요청해서 -> list.do Json 데이터를 요청해서 응답받기
+	 		// ajax로 비동기통신을 해보자!
+	 		 $.ajax({
+	 	       url : "${cpath}/songinfos_ListAjax.do",
+	 	       type : "GET",
+	 	       //data : {키:밸류   }   .을 찍어서 json 데이터를 핸들링한다.
+	 	       dataType : "json",
+	 	       success : asd,  // 콜백함수다 얘가
+	 	       error : function(){ alert("error");  }
+	 	     });
+	 	}
+  
+  var all_list=[];
+  function asd(data){
 	  
-	   
+	  var song_title_list=[];
+	  var song_artist_list=[];
+	  var song_code_list=[];
 
- 	
- 	  
+	$.each(data, (index, obj)=>{
+		song_title_list.push(obj.song_title);
+		song_artist_list.push(obj.artist);
+		song_code_list.push(obj.song_code);
+		
+	});
+	all_list.push(song_title_list);
+	all_list.push(song_artist_list);
+	all_list.push(song_code_list);
+	
+	  send_all_data();
+  }
+  
 
-
- 
+  function send_all_data(){
+  	localStorage.setItem('all_data', JSON.stringify(all_list));
+  	 
+  }
 
 
   // 날씨 로드제이슨
@@ -192,6 +222,7 @@
 	let song_code10;
 	let album_img;
 	let album_img2;
+	
      function ajaxclear(data){
     		all_data = data;
     		pl_title = data[0].pl_title;
@@ -218,7 +249,7 @@
 
 			
     	 	 pieChartData = {
-    	 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+    	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
     	 			    datasets: [{
     	 			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
     	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -238,6 +269,45 @@
 
     	 	     }
      
+     
+     function onclick_firstgraph(all_data){
+    	 pl_title = all_data[0].pl_title;
+ 		song_code1 = all_data[0].song_code1;
+ 		song_code2 = all_data[0].song_code2;
+ 		song_code3 = all_data[0].song_code3;
+ 		song_code4 = all_data[0].song_code4;
+ 		song_code5 = all_data[0].song_code5;
+ 		song_code6 = all_data[0].song_code6;
+ 		song_code7 = all_data[0].song_code7;
+ 		song_code8 = all_data[0].song_code8;
+ 		song_code9 = all_data[0].song_code9;
+ 		song_code10 = all_data[0].song_code10;
+ 		album_img2 = all_data[0].playlist_img;
+ 		obj = [pl_title, song_code1, song_code2, song_code3,song_code4, song_code5, song_code6, song_code7 ,song_code8, song_code9, song_code10, album_img2];
+ 		
+ 		pieChartData = {
+ 	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
+ 	 			    datasets: [{
+ 	 			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
+ 	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 	 			    }] 
+ 	 			};
+ 	 	pieChartData1 = {
+ 	 			  labels: ["어쿠스틱","댄스","활기","화려함"],
+ 	 			  datasets: [{
+ 	 			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
+ 	 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 	 			    }] 
+ 	 			};
+
+	     document.getElementById('legend-div').innerHTML = window.pieChart.generateLegend();
+
+   	 	pieChartDraw();
+	     pieChartDraw1();
+
+ 	 	     }
+     
+     
      function onclick_secondgraph(all_data){
     	 pl_title = all_data[1].pl_title;
  		song_code1 = all_data[1].song_code1;
@@ -254,7 +324,7 @@
  		obj = [pl_title, song_code1, song_code2, song_code3,song_code4, song_code5, song_code6, song_code7 ,song_code8, song_code9, song_code10, album_img2];
  		
  		pieChartData = {
- 	 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  	 			    datasets: [{
  	 			    data: [all_data[1].ly_happy, all_data[1].ly_sad, all_data[1].ly_rest, all_data[1].ly_sexy],
  	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -267,19 +337,12 @@
  	 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
  	 			    }] 
  	 			};
- 	 	// 여기가 문제점! problem 인듯! 왜냐면 캔버스에 계속 차트를 그리기만하고 지우질 않아서 뒤로 넘어가는듯
- 	 	pieChartDraw();
-   	 	//var canvas = document.getElementById("pieChartCanvas");
-	 	//canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
 
 	     document.getElementById('legend-div').innerHTML = window.pieChart.generateLegend();
+
+   	 	pieChartDraw();
 	     pieChartDraw1();
-    	 //var canvas = document.getElementById("pieChartCanvas1");
-    	 canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
 
-	   
-
- 	
  	 	     }
      
      
@@ -309,7 +372,7 @@
 
 			
  	 	 pieChartData = {
- 	 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  	 			    datasets: [{
  	 			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -355,7 +418,7 @@
 
 			
 	 	 pieChartData = {
-	 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
 	 			    datasets: [{
 	 			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
 	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -401,7 +464,7 @@ function ajaxsnow(data){
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -466,13 +529,16 @@ function ajaxhappy(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
+ 	 var show_emotion = "좋은 일 있으신가봐요! 신나게 가자구요!"
+	 $('.widget-title.h6.m-b').text(show_emotion);
+
  	 $('#play_img1').prepend('<img src =resources/images/리듬_행복.jpg/>');
  	 $('#play_img2').prepend('<img src =resources/images/즐거움_행복.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -523,13 +589,16 @@ function ajaxsad(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
+ 	 var show_emotion = "한마디 말보다 노래가 더 위로가 될 때가 있죠"
+ 		 $('.widget-title.h6.m-b').text(show_emotion);
+ 	 
  	 $('#play_img1').prepend('<img src =resources/images/차분_슬픔.jpg/>');
  	 $('#play_img2').prepend('<img src =resources/images/조용_슬픔.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -580,13 +649,16 @@ function ajaxrest(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
+ 	 var show_emotion = "마음마저 편안해지는 음악입니다!"
+ 		 $('.widget-title.h6.m-b').text(show_emotion);
+ 	 
  	 $('#play_img1').prepend('<img src =resources/images/차분_편안.jpg/>');
  	 $('#play_img2').prepend('<img src =resources/images/조용_편안.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -636,13 +708,16 @@ function ajaxcent(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
+ 	 var show_emotion = "오늘따라 감성에 취하고 싶을 때"
+ 		 $('.widget-title.h6.m-b').text(show_emotion);
+ 	 
  	 $('#play_img1').prepend('<img src =resources/images/차분_편안.jpg/>');
  	 $('#play_img2').prepend('<img src =resources/images/차분_슬픔.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -691,13 +766,16 @@ function ajaxshout(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
+ 	 var show_emotion = "끈적하게 분위기 한번 잡아볼까요?"
+ 		 $('.widget-title.h6.m-b').text(show_emotion);
+ 	 
  	 $('#play_img1').prepend('<img src =resources/images/섹시한분위기_신남.jpg/>');
  	 $('#play_img2').prepend('<img src =resources/images/섹시한분위기_조용.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -746,13 +824,16 @@ function ajaxstress(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
+ 	 var show_emotion = "실수 좀 해도 괜찮아요! 시원하게 날려버리죠!"
+ 		 $('.widget-title.h6.m-b').text(show_emotion);
+ 	 
  	 $('#play_img1').prepend('<img src =resources/images/리듬_행복.jpg/>');
  	 $('#play_img2').prepend('<img src =resources/images/리듬_섹시.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -801,13 +882,16 @@ function ajaxgidae(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
+ 	 var show_emotion = "생각하는대로 이뤄질겁니다!"
+ 		 $('.widget-title.h6.m-b').text(show_emotion);
+ 	 
  	 $('#play_img1').prepend('<img src =resources/images/리듬_편안.jpg/>');
  	 $('#play_img2').prepend('<img src =resources/images/리듬_슬픔.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -857,13 +941,16 @@ function ajaxdap(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
+ 	 var show_emotion = "이 노래로 사이다 원샷!"
+ 		 $('.widget-title.h6.m-b').text(show_emotion);
+ 	 
  	 $('#play_img1').prepend('<img src =resources/images/리듬_행복.jpg/>');
  	 $('#play_img2').prepend('<img src =resources/images/리듬_섹시.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
  	 pieChartData = {
- 			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+ 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
  			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
@@ -888,8 +975,12 @@ function ajaxdap(data){
      
      // 파이차트 그리기
 let pieChartDraw = function () {
-    let ctx = document.getElementById('pieChartCanvas').getContext('2d');
-    
+
+    	 let ctx = document.getElementById('pieChartCanvas').getContext('2d');
+
+ 	    if(window.pieChart != undefined){
+  	        window.pieChart.destroy();
+    	      } 
     window.pieChart = new Chart(ctx, {
         type: 'pie',
         data: pieChartData,
@@ -906,7 +997,10 @@ let pieChartDraw = function () {
 let pieChartDraw1 = function () {
     let ctx1 = document.getElementById('pieChartCanvas1').getContext('2d');
    ctx1.fillstyle='white';
-    window.pieChart = new Chart(ctx1, {
+   if(window.pieChart1 != undefined){
+       window.pieChart1.destroy();
+     }
+    window.pieChart1 = new Chart(ctx1, {
         type: 'horizontalBar',
         data: pieChartData1,
         options: {
@@ -934,6 +1028,7 @@ let pieChartDraw1 = function () {
     });
 };
 
+
 // 이제 인서트 인서트!!!!!
 // "location.href='trackDetail.do'"
 
@@ -944,6 +1039,13 @@ function send_data(){
     
 };
 
+// btn1을 눌렀을 때 sound1.mp3 재생
+document.querySelector("#btn1").addEventListener("click", function () {
+  var audio1 = new Audio("resources/musics/Put Me Thru.mp3");
+  audio1.loop = false; // 반복재생하지 않음
+  audio1.volume = 1.0; // 음량 설정
+  audio1.play(); // sound1.mp3 재생
+});
 
 </script>
 
@@ -972,7 +1074,7 @@ function send_data(){
         <a href="player.do" class="navbar-brand md">
            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
               <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
-              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle  cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
               <circle cx="24" cy="24" r="10" fill="#ffffff"/>
               <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
               <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
@@ -1252,7 +1354,7 @@ function send_data(){
                    <div class="">
                       <div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
                         <div class="item-media item-media-4by3">
-                           <a id="play_img1"class="item-media-content"></a>
+                           <a id="play_img1" onclick="onclick_firstgraph(all_data)" class="item-media-content"></a>
                            
                         </div>
                         <div class="item-info">

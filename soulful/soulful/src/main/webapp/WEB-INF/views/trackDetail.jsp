@@ -943,8 +943,7 @@
 		}
 	 	   pieChartDraw2_9();
 		   document.getElementById('legend-div10').innerHTML = window.pieChart.generateLegend();
-		   pieChartDraw3_9();
-		   
+		   pieChartDraw3_9();		   
 		
 		}
 	
@@ -977,6 +976,22 @@
 		   
 		
 		}
+	
+	
+	// btn1을 눌렀을 때 sound1.mp3 재생
+	document.querySelector("#btn1").addEventListener("click", function () {
+	  var audio1 = new Audio("resources/musics/Dance With Me.mp3");
+	  audio1.loop = false; // 반복재생하지 않음
+	  audio1.volume = 1.0; // 음량 설정
+	  audio1.play(); // sound1.mp3 재생
+	});
+
+
+	////////////////
+	
+	
+	
+	
 	
 	</script>
   
@@ -2044,13 +2059,9 @@
           
           <div id="tracks" class="row item-list item-list-xs item-list-li m-b">
                 <div class="col-xs-12" data-toggle="modal" data-target="#play1" class="nav-link">
-           
-                   <div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                  
-                    <div class="item-media "> </a>
-                       
-                       
-                        <a href="#" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
+                   <div class="item r" data-id="item-1" data-src="resources/musics/Put Me Thru.mp3">
+                    <div class="item-media "> 
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
                         <div class="item-overlay center">
                            <button  class="btn-playpause">Play</button>
                         </div>
@@ -2061,24 +2072,20 @@
                            <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
                            <div class="dropdown-menu pull-right black lt"></div>
                         </div>
-                       
                         <div class="item-title text-ellipsis">
-                      
                            <a id = song_name1></a>
                         </div>
                         <div class="item-author text-sm text-ellipsis hide">
-                           <a href="#" class="text-muted">Fifth Harmony</a>
+                           <a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
                         </div>
                         <div class="item-meta text-sm text-muted">
                             <span class="item-meta-right"></span>
                           </div>
-            
-            
                      </div>
                   </div>
                </div>
                 <div class="col-xs-12" data-toggle="modal" data-target="#play2" class="nav-link">
-                   <div class="item r" data-id="item-9" data-src="http://api.soundcloud.com/tracks/264094434/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                   <div class="item r" data-id="item-2" data-src="resources/musics/1 On 1.wav">
                      <div class="item-media ">
                         <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b8.jpg');"></a>
                         <div class="item-overlay center">
@@ -2100,13 +2107,11 @@
                         <div class="item-meta text-sm text-muted">
                             <span class="item-meta-right"></span>
                           </div>
-            
-            
                      </div>
                   </div>
                </div>
                 <div class="col-xs-12" data-toggle="modal" data-target="#play3" class="nav-link">
-                   <div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                   <div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                      <div class="item-media ">
                         <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
                         <div class="item-overlay center">
@@ -2134,11 +2139,11 @@
                   </div>
                </div>
                 <div class="col-xs-12" data-toggle="modal" data-target="#play4" class="nav-link">
-                   <div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                   <div class="item r" data-id="item-4" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                      <div class="item-media ">
                         <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
                         <div class="item-overlay center">
-                           <button  class="btn-playpause">Play</button>
+                           <button id = "btn1" class="btn-playpause">Play</button>
                         </div>
                      </div>
                      <div class="item-info">
@@ -2162,7 +2167,7 @@
                   </div>
                </div>
                 <div class="col-xs-12" data-toggle="modal" data-target="#play5" class="nav-link">
-                   <div class="item r" data-id="item-1" data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                   <div class="item r" data-id="item-5" data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                      <div class="item-media ">
                         <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b0.jpg');"></a>
                         <div class="item-overlay center">
@@ -2190,7 +2195,7 @@
                   </div>
                </div>
                 <div class="col-xs-12" data-toggle="modal" data-target="#play6" class="nav-link">
-                   <div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
+                   <div class="item r" data-id="item-6" data-src="http://streaming.radionomy.com/JamendoLounge">
                      <div class="item-media ">
                         <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
                         <div class="item-overlay center">
@@ -2218,7 +2223,7 @@
                   </div>
                </div>
                 <div class="col-xs-12" data-toggle="modal" data-target="#play7" class="nav-link">
-                   <div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                   <div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                      <div class="item-media ">
                         <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
                         <div class="item-overlay center">
@@ -2274,7 +2279,7 @@
                   </div>
                </div>
                 <div class="col-xs-12" data-toggle="modal" data-target="#play9" class="nav-link">
-                   <div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                   <div class="item r" data-id="item-9" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                      <div class="item-media ">
                         <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b9.jpg');"></a>
                         <div class="item-overlay center">
@@ -2302,7 +2307,7 @@
                   </div>
                </div>
                 <div class="col-xs-12" data-toggle="modal" data-target="#play10" class="nav-link">
-                   <div class="item r" data-id="item-12" data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                   <div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                      <div class="item-media ">
                         <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b11.jpg');"></a>
                         <div class="item-overlay center">
@@ -2620,9 +2625,9 @@
 
   <script src="resources/libs/mediaelement/build/mediaelement-and-player.min.js"></script>
   <script src="resources/libs/mediaelement/build/mep.js"></script>
-  <script src="resources/scripts/player.js"></script>
 
   <script src="resources/scripts/config.lazyload.js"></script>
+  <script src="resources/scripts/player.js"></script>
   <script src="resources/scripts/ui-load.js"></script>
   <script src="resources/scripts/ui-jp.js"></script>
   <script src="resources/scripts/ui-include.js"></script>
