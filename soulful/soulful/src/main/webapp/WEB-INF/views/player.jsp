@@ -252,14 +252,14 @@
     	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
     	 			    datasets: [{
     	 			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
-    	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+    	 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
     	 			    }] 
     	 			};
     	 	pieChartData1 = {
     	 			  labels: ["어쿠스틱","댄스","활기","화려함"],
     	 			  datasets: [{
     	 			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
-    	 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+    	 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
     	 			    }] 
     	 			};
     	 pieChartDraw();
@@ -289,14 +289,14 @@
  	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  	 			    datasets: [{
  	 			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 	 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  	 			    }] 
  	 			};
  	 	pieChartData1 = {
  	 			  labels: ["어쿠스틱","댄스","활기","화려함"],
  	 			  datasets: [{
  	 			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 	 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 	 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  	 			    }] 
  	 			};
 
@@ -327,14 +327,14 @@
  	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  	 			    datasets: [{
  	 			    data: [all_data[1].ly_happy, all_data[1].ly_sad, all_data[1].ly_rest, all_data[1].ly_sexy],
- 	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 	 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  	 			    }] 
  	 			};
  	 	pieChartData1 = {
  	 			  labels: ["어쿠스틱","댄스","활기","화려함"],
  	 			  datasets: [{
  	 			  data: [all_data[1].tr_acou, all_data[1].tr_dance, all_data[1].tr_ener, all_data[1].tr_loud],
- 	 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 	 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  	 			    }] 
  	 			};
 
@@ -375,14 +375,14 @@
  	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  	 			    datasets: [{
  	 			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 	 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  	 			    }] 
  	 			};
  	 	pieChartData1 = {
  	 			  labels: ["어쿠스틱","댄스","활기","화려함"],
  	 			  datasets: [{
  	 			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 	 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 	 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  	 			    }] 
  	 			};
  	 pieChartDraw();
@@ -421,14 +421,14 @@
 	 			    labels: ['기쁨', '슬픔', '편안', '유혹'],
 	 			    datasets: [{
 	 			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
-	 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+	 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
 	 			    }] 
 	 			};
 	 	pieChartData1 = {
 	 			  labels: ["어쿠스틱","댄스","활기","화려함"],
 	 			  datasets: [{
 	 			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
-	 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+	 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
 	 			    }] 
 	 			};
 	 pieChartDraw();
@@ -467,14 +467,14 @@ function ajaxsnow(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -541,14 +541,14 @@ function ajaxhappy(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -601,14 +601,14 @@ function ajaxsad(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -661,14 +661,14 @@ function ajaxrest(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -720,14 +720,14 @@ function ajaxcent(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -778,14 +778,14 @@ function ajaxshout(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -836,14 +836,14 @@ function ajaxstress(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -894,14 +894,14 @@ function ajaxgidae(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -953,14 +953,14 @@ function ajaxdap(data){
  			    labels: ['기쁨', '슬픔', '편안', '유혹'],
  			    datasets: [{
  			    data: [all_data[0].ly_happy, all_data[0].ly_sad, all_data[0].ly_rest, all_data[0].ly_sexy],
- 			    backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			    backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
  			    }] 
  			};
  	pieChartData1 = {
  			  labels: ["어쿠스틱","댄스","활기","화려함"],
  			  datasets: [{
  			  data: [all_data[0].tr_acou, all_data[0].tr_dance, all_data[0].tr_ener, all_data[0].tr_loud],
- 			 backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+ 			 backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
  			    }] 
  			};
  pieChartDraw();
@@ -1400,10 +1400,10 @@ document.querySelector("#btn1").addEventListener("click", function () {
                <div style="width: 50%; float:right;">
                   <div id='legend-div' class="legend-div">
 					<ul>
-					<li><span style="background-color: 'rgb(198, 162, 198)'">기쁨</span></li>
-					<li><span style="background-color: 'rgb(161, 137, 185)'">슬픔</span></li>
-					<li><span style="background-color: 'rgb(188, 143, 143)'">편안</span></li>
-					<li><span style="background-color: 'rgb(217, 177, 155)'">유혹</span></li>
+					<li><span style="background-color: 'rgb(255, 184, 105)'">기쁨</span></li>
+					<li><span style="background-color: 'rgb(118, 117, 167)'">슬픔</span></li>
+					<li><span style="background-color: 'rgb(185, 111, 144)'">편안</span></li>
+					<li><span style="background-color:  'rgb(218, 78, 78)'">유혹</span></li>
 					</ul>
                   </div>
                </div>
