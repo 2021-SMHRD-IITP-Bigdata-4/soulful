@@ -581,29 +581,7 @@
 	height: 0 !important;
 }
 
-.mejs-error {
-	position: absolute;
-	z-index: 1050;
-	bottom: 20px;
-	left: 10px;
-	background-color: #f44455;
-	border-color: #f44455;
-	color: #fff;
-	font-size: 12px;
-	padding: 10px 15px;
-	border-radius: 3px;
-}
 
-.mejs-error:after{
-	content: '';
-	position: absolute;
-	left: 15px;
-	bottom: -5px;
-	border-style: solid;
-	border-width: 5px 5px 0 5px;
-	border-color: transparent;
-	border-top-color: inherit;
-}
 
 @-webkit-keyframes mejs-spin {
   0% {

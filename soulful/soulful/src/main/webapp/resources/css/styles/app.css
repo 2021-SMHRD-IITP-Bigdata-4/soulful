@@ -5307,7 +5307,7 @@ body {
 
 @media (max-width: 767px) {
   .padding {
-    padding: 1rem 0.5rem;
+    padding: 0.5rem 1rem;
   }
   .padding-out {
     margin: -1.5rem -0.5rem;
@@ -7797,7 +7797,8 @@ fieldset[disabled] .md-switch input + i:after {
 }
 
 .legend-div ul li {
-  margin: 15px 0;
+  margin-top: 10px;
+  margin-left: 15px;
   color: whitesmoke;
   
 }
@@ -7810,5 +7811,7 @@ fieldset[disabled] .md-switch input + i:after {
   border-radius: 50%;
   margin-right: 10px;
   vertical-align: middle;
+  
 }
 
+}

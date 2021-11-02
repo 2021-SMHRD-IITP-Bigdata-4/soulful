@@ -26,16 +26,16 @@ public class SonginfosVO {
 	private String song_title;
 	private String song_genre;
 	private String artist;
-	private String album_name;
-	private Date album_date;
-	private String song_lyrics;
-	private Date song_playdate;
-	private int song_play_count;
-	private int song_rating;
 	private String track_emotion;
-	private String lyric_emotion1;
-	private String lyric_emotion2;
-	private String lyric_emotion_list;
-	private Blob song_img;
+	private String track_acousticness;
+	private String track_danceability;
+	private String track_energy;
+	private String track_loudness;
+	private String lyric_emotion;
+	private String lyric_happy;
+	private String lyric_sad;
+	private String lyric_rest;
+	private String lyric_sexy;
+	
 	
 }

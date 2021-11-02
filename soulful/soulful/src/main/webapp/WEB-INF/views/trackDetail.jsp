@@ -46,47 +46,941 @@
   <link rel="stylesheet" href="resources/libs/mediaelement/build/mediaelementplayer.min.css" type="text/css" />
   <link rel="stylesheet" href="resources/libs/mediaelement/build/mep.css" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type = "text/javascript">
   
-  	function loadJson(){
-  		 $.ajax({
-    	       url : "${cpath}/songinfos_ListAjax.do",
-    	       type : "GET",
-    	       //data : {키:밸류   }   .을 찍어서 json 데이터를 핸들링한다.
-    	       dataType : "json",
-    	       success : ajaxhtml,  // 콜백함수다 얘가
-    	       error : function(){ alert("error");  }
-    	     });
-  	}
+  
+  //getItem(접근할 키값): 저장된 데이터를 반환
+
+     var song_data = localStorage.getItem('data');
+     var arr = JSON.parse(song_data);
+
+
+   // 위엔 고정  
+     
+   
+   window.onload = function () {
+ 	    $('#pl_title').text(arr[0]);
+      loadJson();
+}
+
+
+   let pieChartData2 = {
+			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+			    datasets: [{
+			        data: [1, 2, 3, 4],
+			        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+			    }] 
+			};
+   let pieChartData3 = {
+			    labels: ['이', '버', '서', '어'],
+			    datasets: [{
+			        data: [70, 80, 85, 30],
+			        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+			    }] 
+			};
+     
+/////     
+     
+     
+     
+     
+      function loadJson(){
+		 		// 서버에 요청해서 -> list.do Json 데이터를 요청해서 응답받기
+		 		// ajax로 비동기통신을 해보자!
+		 		 $.ajax({
+		 	       url : "${cpath}/songinfos_ListAjax.do",
+		 	       type : "GET",
+		 	       //data : {키:밸류   }   .을 찍어서 json 데이터를 핸들링한다.
+		 	       dataType : "json",
+		 	       success : ajaxhtml,  // 콜백함수다 얘가
+		 	       error : function(){ alert("error");  }
+		 	     });
+		 	}
+		 	
+		 var title1;
+			var title2;
+			var title3;
+			var title4;
+			var title5;
+			var title6;
+			var title7;
+			var title8;
+			var title9;
+			var title10;
+			
+			var all_data;
+			
+			 var code1;
+				var code2;
+				var code3;
+				var code4;
+				var code5;
+				var code6;
+				var code7;
+				var code8;
+				var code9;
+				var code10;
+				
+				 var artist1;
+					var artist2;
+					var artist3;
+					var artist4;
+					var artist5;
+					var artist6;
+					var artist7;
+					var artist8;
+					var artist9;
+					var artist10;	
   	function ajaxhtml(data){
-  		var html="<table class='table'>";
-		html+="<tr>";
-		html+="<td>제목</td>";
-		html+="<td>장르</td>";
-		html+="<td>가사감정</td>";
-		html+="<td>음원감정</td>";
-		html+="<td>가사 퍼센트</td>";
-		html+="<td>감정 퍼센트</td>";
+		all_data = data;
+
+		for(var z = 1; z <= 10; z++){
+			for(var i = 0; i < data.length; i++){
+				if (arr[z] == data[i].song_code){
+					eval("title"+z+"= data["+i+"].song_title")
+					eval("code"+z+"= data["+i+"].song_code")
+					eval("artist"+z+"= data["+i+"].artist")
+			}
+		}
+		}
+		$('#album_img').prepend('<img style="width:100%; height:100%; object-fit:cover;" src =resources/images/'+arr[11]+'.jpg/>');
+	 	 $('#song_name1').text(title1);
+	 	 $('#song_name2').text(title2);
+	 	 $('#song_name3').text(title3);
+	 	 $('#song_name4').text(title4);
+	 	 $('#song_name5').text(title5);
+	 	 $('#song_name6').text(title6);
+	 	 $('#song_name7').text(title7);
+	 	 $('#song_name8').text(title8);
+	 	 $('#song_name9').text(title9);
+	 	 $('#song_name10').text(title10);
+	 	 
+	 	 $('#song_name_1').text(title1);
+	 	 $('#song_name_2').text(title2);
+	 	 $('#song_name_3').text(title3);
+	 	 $('#song_name_4').text(title4);
+	 	 $('#song_name_5').text(title5);
+	 	 $('#song_name_6').text(title6);
+	 	 $('#song_name_7').text(title7);
+	 	 $('#song_name_8').text(title8);
+	 	 $('#song_name_9').text(title9);
+	 	 $('#song_name_10').text(title10);
+	 	 
+	 	 $('#song_artist_1').text(artist1);
+	 	 $('#song_artist_2').text(artist2);
+	 	 $('#song_artist_3').text(artist3);
+	 	 $('#song_artist_4').text(artist4);
+	 	 $('#song_artist_5').text(artist5);
+	 	 $('#song_artist_6').text(artist6);
+	 	 $('#song_artist_7').text(artist7);
+	 	 $('#song_artist_8').text(artist8);
+	 	 $('#song_artist_9').text(artist9);
+	 	 $('#song_artist_10').text(artist10);
+	 	 
+	 	gr_input1(data);
+	 	gr_input2(data);
+	 	gr_input3(data);
+	 	gr_input4(data);
+	 	gr_input5(data);
+	 	gr_input6(data);
+	 	gr_input7(data);
+	 	gr_input8(data);
+	 	gr_input9(data);
+	 	gr_input10(data);
+	 	
+ 	 
+	}
+
 		
-		html+="</tr>";
-		// 반복문					// 이름없는 함수 익명 함수는 function을 쓰지 않고 저렇게 써도 작동된다.(람다식 함수이라 한다.)
-		$.each(data, (index, obj)=>{
-			html+="<tr>";
-  			html+="<td>"+obj.song_title+"</td>";
-  			html+="<td>"+obj.song_genre+"</td>";
-  			html+="<td>"+obj.lyric_emotion1+"</td>";
-  			html+="<td>"+obj.track_emotion+"</td>";
-  			html+="<td>"+obj.lyric_joy+"</td>";
-  			html+="<td>"+obj.track_joy+"</td>"
-  			html+="</tr>";
-		});
-		html+="</table>"
-		$("#msg").html(html);
-  	}
+		let pieChartDraw2_1 = function () {
+		    let ctx2 = document.getElementById('pieChartCanvas2_1').getContext('2d');
+		    
+		    window.pieChart = new Chart(ctx2, {
+		        type: 'pie',
+		        data: pieChartData2_1,
+		        options: {
+		            responsive: false,
+		            legend: {
+		                display: false
+		            }
+		        }
+		    });
+		};
+		 let pieChartDraw3_1 = function () {
+		     let ctx3 = document.getElementById('pieChartCanvas3_1').getContext('2d');
+		   
+		     window.pieChart = new Chart(ctx3, {
+		         type: 'horizontalBar',
+		         data: pieChartData3_1,
+		         options: {
+		             responsive: false,
+		             legend: {
+		                 display: false,
+		                 fontColor: "white"
+		               
+		                 },
+		                 scales: {
+		                     yAxes: [{
+		                         ticks: {
+		                             fontColor: "white",
+		                             fontSize: 16,
+  
+		                         }
+		                     }],
+		                     xAxes: [{
+		                         ticks: {
+		                             fontColor: "white",
+		                             fontSize: 16,
+		                 }
+		                     }]
+		                 }
+		             }
+	     });
+		 };
+		 
+		 
+
+			
+			let pieChartDraw2_2 = function () {
+			    let ctx2 = document.getElementById('pieChartCanvas2_2').getContext('2d');
+			    
+			    window.pieChart = new Chart(ctx2, {
+			        type: 'pie',
+			        data: pieChartData2_2,
+			        options: {
+			            responsive: false,
+			            legend: {
+			                display: false
+			            }
+			        }
+			    });
+			};
+			 let pieChartDraw3_2 = function () {
+			     let ctx3 = document.getElementById('pieChartCanvas3_2').getContext('2d');
+			   
+			     window.pieChart = new Chart(ctx3, {
+			         type: 'horizontalBar',
+			         data: pieChartData3_2,
+			         options: {
+			             responsive: false,
+			             legend: {
+			                 display: false,
+			                 fontColor: "white"
+			               
+			                 },
+			                 scales: {
+			                     yAxes: [{
+			                         ticks: {
+			                             fontColor: "white",
+			                             fontSize: 16,
+	    
+			                         }
+			                     }],
+			                     xAxes: [{
+			                         ticks: {
+			                             fontColor: "white",
+			                             fontSize: 16,
+			                 }
+			                     }]
+			                 }
+			             }
+		     });
+			 };
+			 
+
+				
+				let pieChartDraw2_3 = function () {
+				    let ctx2 = document.getElementById('pieChartCanvas2_3').getContext('2d');
+				    
+				    window.pieChart = new Chart(ctx2, {
+				        type: 'pie',
+				        data: pieChartData2_3,
+				        options: {
+				            responsive: false,
+				            legend: {
+				                display: false
+				            }
+				        }
+				    });
+				};
+				 let pieChartDraw3_3 = function () {
+				     let ctx3 = document.getElementById('pieChartCanvas3_3').getContext('2d');
+				   
+				     window.pieChart = new Chart(ctx3, {
+				         type: 'horizontalBar',
+				         data: pieChartData3_3,
+				         options: {
+				             responsive: false,
+				             legend: {
+				                 display: false,
+				                 fontColor: "white"
+				               
+				                 },
+				                 scales: {
+				                     yAxes: [{
+				                         ticks: {
+				                             fontColor: "white",
+				                             fontSize: 16,
+		    
+				                         }
+				                     }],
+				                     xAxes: [{
+				                         ticks: {
+				                             fontColor: "white",
+				                             fontSize: 16,
+				                 }
+				                     }]
+				                 }
+				             }
+			     });
+				 };
+				 
+
+					
+					let pieChartDraw2_4 = function () {
+					    let ctx2 = document.getElementById('pieChartCanvas2_4').getContext('2d');
+					    
+					    window.pieChart = new Chart(ctx2, {
+					        type: 'pie',
+					        data: pieChartData2_4,
+					        options: {
+					            responsive: false,
+					            legend: {
+					                display: false
+					            }
+					        }
+					    });
+					};
+					 let pieChartDraw3_4 = function () {
+					     let ctx3 = document.getElementById('pieChartCanvas3_4').getContext('2d');
+					   
+					     window.pieChart = new Chart(ctx3, {
+					         type: 'horizontalBar',
+					         data: pieChartData3_4,
+					         options: {
+					             responsive: false,
+					             legend: {
+					                 display: false,
+					                 fontColor: "white"
+					               
+					                 },
+					                 scales: {
+					                     yAxes: [{
+					                         ticks: {
+					                             fontColor: "white",
+					                             fontSize: 16,
+			    
+					                         }
+					                     }],
+					                     xAxes: [{
+					                         ticks: {
+					                             fontColor: "white",
+					                             fontSize: 16,
+					                 }
+					                     }]
+					                 }
+					             }
+				     });
+					 };
+					 
+
+						
+						let pieChartDraw2_5 = function () {
+						    let ctx2 = document.getElementById('pieChartCanvas2_5').getContext('2d');
+						    
+						    window.pieChart = new Chart(ctx2, {
+						        type: 'pie',
+						        data: pieChartData2_5,
+						        options: {
+						            responsive: false,
+						            legend: {
+						                display: false
+						            }
+						        }
+						    });
+						};
+						 let pieChartDraw3_5 = function () {
+						     let ctx3 = document.getElementById('pieChartCanvas3_5').getContext('2d');
+						   
+						     window.pieChart = new Chart(ctx3, {
+						         type: 'horizontalBar',
+						         data: pieChartData3_5,
+						         options: {
+						             responsive: false,
+						             legend: {
+						                 display: false,
+						                 fontColor: "white"
+						               
+						                 },
+						                 scales: {
+						                     yAxes: [{
+						                         ticks: {
+						                             fontColor: "white",
+						                             fontSize: 16,
+				    
+						                         }
+						                     }],
+						                     xAxes: [{
+						                         ticks: {
+						                             fontColor: "white",
+						                             fontSize: 16,
+						                 }
+						                     }]
+						                 }
+						             }
+					     });
+						 };
+						 
+
+							
+							let pieChartDraw2_6 = function () {
+							    let ctx2 = document.getElementById('pieChartCanvas2_6').getContext('2d');
+							    
+							    window.pieChart = new Chart(ctx2, {
+							        type: 'pie',
+							        data: pieChartData2_6,
+							        options: {
+							            responsive: false,
+							            legend: {
+							                display: false
+							            }
+							        }
+							    });
+							};
+							 let pieChartDraw3_6 = function () {
+							     let ctx3 = document.getElementById('pieChartCanvas3_6').getContext('2d');
+							   
+							     window.pieChart = new Chart(ctx3, {
+							         type: 'horizontalBar',
+							         data: pieChartData3_6,
+							         options: {
+							             responsive: false,
+							             legend: {
+							                 display: false,
+							                 fontColor: "white"
+							               
+							                 },
+							                 scales: {
+							                     yAxes: [{
+							                         ticks: {
+							                             fontColor: "white",
+							                             fontSize: 16,
+					    
+							                         }
+							                     }],
+							                     xAxes: [{
+							                         ticks: {
+							                             fontColor: "white",
+							                             fontSize: 16,
+							                 }
+							                     }]
+							                 }
+							             }
+						     });
+							 };
+							 
+
+								
+								let pieChartDraw2_7 = function () {
+								    let ctx2 = document.getElementById('pieChartCanvas2_7').getContext('2d');
+								    
+								    window.pieChart = new Chart(ctx2, {
+								        type: 'pie',
+								        data: pieChartData2_7,
+								        options: {
+								            responsive: false,
+								            legend: {
+								                display: false
+								            }
+								        }
+								    });
+								};
+								 let pieChartDraw3_7 = function () {
+								     let ctx3 = document.getElementById('pieChartCanvas3_7').getContext('2d');
+								   
+								     window.pieChart = new Chart(ctx3, {
+								         type: 'horizontalBar',
+								         data: pieChartData3_7,
+								         options: {
+								             responsive: false,
+								             legend: {
+								                 display: false,
+								                 fontColor: "white"
+								               
+								                 },
+								                 scales: {
+								                     yAxes: [{
+								                         ticks: {
+								                             fontColor: "white",
+								                             fontSize: 16,
+						    
+								                         }
+								                     }],
+								                     xAxes: [{
+								                         ticks: {
+								                             fontColor: "white",
+								                             fontSize: 16,
+								                 }
+								                     }]
+								                 }
+								             }
+							     });
+								 };
+								 
+
+									
+									let pieChartDraw2_8 = function () {
+									    let ctx2 = document.getElementById('pieChartCanvas2_8').getContext('2d');
+									    
+									    window.pieChart = new Chart(ctx2, {
+									        type: 'pie',
+									        data: pieChartData2_8,
+									        options: {
+									            responsive: false,
+									            legend: {
+									                display: false
+									            }
+									        }
+									    });
+									};
+									 let pieChartDraw3_8 = function () {
+									     let ctx3 = document.getElementById('pieChartCanvas3_8').getContext('2d');
+									   
+									     window.pieChart = new Chart(ctx3, {
+									         type: 'horizontalBar',
+									         data: pieChartData3_8,
+									         options: {
+									             responsive: false,
+									             legend: {
+									                 display: false,
+									                 fontColor: "white"
+									               
+									                 },
+									                 scales: {
+									                     yAxes: [{
+									                         ticks: {
+									                             fontColor: "white",
+									                             fontSize: 16,
+							    
+									                         }
+									                     }],
+									                     xAxes: [{
+									                         ticks: {
+									                             fontColor: "white",
+									                             fontSize: 16,
+									                 }
+									                     }]
+									                 }
+									             }
+								     });
+									 };
+									 
+
+										
+										let pieChartDraw2_9 = function () {
+										    let ctx2 = document.getElementById('pieChartCanvas2_9').getContext('2d');
+										    
+										    window.pieChart = new Chart(ctx2, {
+										        type: 'pie',
+										        data: pieChartData2_9,
+										        options: {
+										            responsive: false,
+										            legend: {
+										                display: false
+										            }
+										        }
+										    });
+										};
+										 let pieChartDraw3_9 = function () {
+										     let ctx3 = document.getElementById('pieChartCanvas3_9').getContext('2d');
+										   
+										     window.pieChart = new Chart(ctx3, {
+										         type: 'horizontalBar',
+										         data: pieChartData3_9,
+										         options: {
+										             responsive: false,
+										             legend: {
+										                 display: false,
+										                 fontColor: "white"
+										               
+										                 },
+										                 scales: {
+										                     yAxes: [{
+										                         ticks: {
+										                             fontColor: "white",
+										                             fontSize: 16,
+								    
+										                         }
+										                     }],
+										                     xAxes: [{
+										                         ticks: {
+										                             fontColor: "white",
+										                             fontSize: 16,
+										                 }
+										                     }]
+										                 }
+										             }
+									     });
+										 };
+										 
+
+											
+											let pieChartDraw2_10 = function () {
+											    let ctx2 = document.getElementById('pieChartCanvas2_10').getContext('2d');
+											    
+											    window.pieChart = new Chart(ctx2, {
+											        type: 'pie',
+											        data: pieChartData2_10,
+											        options: {
+											            responsive: false,
+											            legend: {
+											                display: false
+											            }
+											        }
+											    });
+											};
+											 let pieChartDraw3_10 = function () {
+											     let ctx3 = document.getElementById('pieChartCanvas3_10').getContext('2d');
+											   
+											     window.pieChart = new Chart(ctx3, {
+											         type: 'horizontalBar',
+											         data: pieChartData3_10,
+											         options: {
+											             responsive: false,
+											             legend: {
+											                 display: false,
+											                 fontColor: "white"
+											               
+											                 },
+											                 scales: {
+											                     yAxes: [{
+											                         ticks: {
+											                             fontColor: "white",
+											                             fontSize: 16,
+									    
+											                         }
+											                     }],
+											                     xAxes: [{
+											                         ticks: {
+											                             fontColor: "white",
+											                             fontSize: 16,
+											                 }
+											                     }]
+											                 }
+											             }
+										     });
+											 };
+											 
+
+			
+		
+
+			
+
+
+	
+	function gr_input1(data){
+ 	for (var i= 0; i < data.length; i++){
+		if (data[i].song_code == code1){
+			 pieChartData2_1 = {
+					    labels: ['기쁨', '슬픔', '편안', '흥분'],
+					    datasets: [{
+					        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+					        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					    }] 
+					};
+			 pieChartData3_1 = {
+				     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+				         datasets: [{
+				         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+				         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+				     }] 
+				 };
+
+		
+		};
+	}
+ 	   pieChartDraw2_1();
+	   document.getElementById('legend-div2').innerHTML = window.pieChart.generateLegend();
+	   pieChartDraw3_1();
+	   
+	
+	}
+	
+	function gr_input2(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code2){
+				
+				 pieChartData2_2 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_2 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+
+			};
+		}
+	 	   pieChartDraw2_2();
+		   document.getElementById('legend-div3').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_2();
+		
+		}
+	
+	function gr_input3(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code3){
+				
+				 pieChartData2_3 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_3 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+			
+			};
+		}
+	 	   pieChartDraw2_3();
+		   document.getElementById('legend-div4').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_3();
+		  
+		
+		}
+	
+	function gr_input4(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code4){
+				
+				 pieChartData2_4 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_4 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+			
+			};
+		}
+	 	   pieChartDraw2_4();
+		   document.getElementById('legend-div5').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_4();
+		 
+		
+		}
+	
+	function gr_input5(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code5){
+				
+				 pieChartData2_5 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_5 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+			
+			};
+		}
+	 	   pieChartDraw2_5();
+		   document.getElementById('legend-div6').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_5();
+		 
+		
+		}
+	
+	function gr_input6(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code6){
+				
+				 pieChartData2_6 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_6 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+			
+			};
+		}
+	 	   pieChartDraw2_6();
+		   document.getElementById('legend-div7').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_6();
+		  
+		
+		}
+	
+	function gr_input7(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code7){
+				
+				 pieChartData2_7 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_7 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+			
+			};
+		}
+	 	   pieChartDraw2_7();
+		   document.getElementById('legend-div8').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_7();
+		   
+		
+		}
+	
+	function gr_input8(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code8){
+				
+				 pieChartData2_8 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_8 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+			
+			};
+		}
+	 	   pieChartDraw2_8();
+		   document.getElementById('legend-div9').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_8();
+		   
+		
+		}
+	
+	function gr_input9(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code9){
+				
+				 pieChartData2_9 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_9 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+			
+			};
+		}
+	 	   pieChartDraw2_9();
+		   document.getElementById('legend-div10').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_9();
+		   
+		
+		}
+	
+	function gr_input10(data){
+	 	for (var i= 0; i < data.length; i++){
+			if (data[i].song_code == code10){
+				
+				 pieChartData2_10 = {
+						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    datasets: [{
+						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
+						        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+						    }] 
+						};
+				 pieChartData3_10 = {
+					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
+					         datasets: [{
+						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
+					     }] 
+					 };
+
+				  
+			
+			};
+		}
+	 	   pieChartDraw2_10();
+		   document.getElementById('legend-div11').innerHTML = window.pieChart.generateLegend();
+		   pieChartDraw3_10();
+		   
+		
+		}
+	
 	</script>
+  
+
   <!-- endbuild -->
 </head>
 <body>
@@ -94,63 +988,61 @@
   <div class="app dk" id="app">
 
 <!-- ############ LAYOUT START-->
-<div id="play" class="app-aside modal fade nav-dropdown">
+<div id="play1" class="app-aside modal fade nav-dropdown">
     <!-- fluid app aside -->
     <div class="bottom navside grey dk" data-layout="column">
       <div class="navbar no-radius">
         <!-- brand -->
         <a href="player.do" class="navbar-brand md">
-        	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
-        		<circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
-        		<circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
-        		<circle cx="24" cy="24" r="10" fill="#ffffff"/>
-        		<circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
-        		<path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
-        		<circle cx="24" cy="24" r="3" fill="#000000"/>
-        	</svg>
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
         
-        	<img src="resources/images/logo.png" alt="." class="hide">
-        	<span class="hidden-folded inline">SoulFull</span>
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
         </a>
-		<a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
         <!-- / brand -->
-	</div>
+   </div>
   <div class="page_two">
   
     <main class="page_two__main">
      
         <div class="padding" style="width:100%; height: 200px;">
-          <div style="width: 50%;  float: left; text-align: center;"">
+          <div style="width: 50%;  float: left; text-align: center;">
             <div class="legend-div">
-              <canvas id="pieChartCanvas2" style="width:150px; height:150px;"></canvas>
+              <canvas id="pieChartCanvas2_1" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
           </div>
-          <div style="width: 50%; float:right; padding-top: 15px;">
-            <div id='legend-div2' class="legend-div" style="text-align: center;">
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div2' class="legend-div">
 
             </div>
           </div>
         </div>
-        <div class="padding" style="width:100%; height: 200px;">
-          <div style="width: 50%; text-align: center; float: left;">
-            <div class="legend-div">
-              <canvas id="pieChartCanvas3" width="150px" height="150px"></canvas>
-              
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_1" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h6>
-          </div>
-          <div style="width: 50%; float:right; padding-top: 15px;">
-            <div id='legend-div3' class="legend-div"  style="text-align: center;">
-
-            </div>
-          </div>
-        </div>
+   
+   
         <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span class="currrent_music_info__title">Lullaby</span>
-        <span class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_1"class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_1"class="currrent_music_info__singer text-muted">적재</span>
       </div>
       <div class="page_two__main__play_time">
         <span>2:13</span>
@@ -169,45 +1061,704 @@
       </div>
     </main>
   </div>
-		
 
-
-		  </div>
+        </div>
   </div>
-<!--  여기까지가 슬라이드 -->
 
-<div class="container">
-  <div class="panel panel-default">
-    <div class="panel-heading">BOOK LIST</div>
-    <div class="panel-body">
-    	<table class = "table table-hover">
-			<tr>
-				<td>제목</td>
-				<td>장르</td>
-				<td>가사감정</td>
-				<td>음원감정</td>
-				<td>가사 퍼센트</td>
-				<td>음원 퍼센트</td>
-			</tr>    		
-				<!-- 반복문을 쓰기위해 c:를 쓴것이다. -->
-			<c:forEach var="vo" items="${songinfos_List}">  <!-- 이거 대신 저걸 사용 List<BoardVO> list = (List<BoardVO>)request.getAttribute("list"); -->
-    		<tr>
-				<td>${vo.song_title}</td>
-				<td>${vo.song_genre}</td>
-				<td>${vo.lyric_emotion1}</td>
-				<td>${vo.track_emotion}</td>
-				<td>${vo.lyric_joy}</td>
-				<td>${vo.track_joy}</td>
-			</tr> 
-			</c:forEach>
-    	</table>
-    	<button class="btn btn-success btn-sm" onclick="loadJson()">도서목록 가져오기</button>
-         <div id="msg">여기에 JSON데이터를 출력하시오.</div>
-    	
-</div>
+<div id="play2" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_2" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div3' class="legend-div">
 
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_2" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_2"class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_2"class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
 
+        </div>
+  </div>
+  
+  <div id="play3" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_3" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div4' class="legend-div">
 
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_3" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_3"class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_3"class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
+
+        </div>
+  </div>
+  
+  <div id="play4" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_4" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div5' class="legend-div">
+
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_4" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_4"class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_4"class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
+
+        </div>
+  </div>
+  
+  <div id="play5" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_5" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div6' class="legend-div">
+
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_5" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_5" class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_5"class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
+
+        </div>
+  </div>
+  
+  <div id="play6" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_6" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div7' class="legend-div">
+
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_6" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_6" class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_6"class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
+
+        </div>
+  </div>
+  
+  <div id="play7" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_7" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div8' class="legend-div">
+
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_7" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_7"class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_7"class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
+
+        </div>
+  </div>
+  
+  <div id="play8" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_8" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div9' class="legend-div">
+
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_8" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_8"class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_8"class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
+
+        </div>
+  </div>
+  
+  <div id="play9" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_9" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div10' class="legend-div">
+
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_9" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_9"class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_9"class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
+
+        </div>
+  </div>
+  
+  <div id="play10" class="app-aside modal fade nav-dropdown">
+    <!-- fluid app aside -->
+    <div class="bottom navside grey dk" data-layout="column">
+      <div class="navbar no-radius">
+        <!-- brand -->
+        <a href="player.do" class="navbar-brand md">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+              <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.2)"/>
+              <circle cx="24" cy="24" r="22" fill="#1c202b" class="brand-color"/>
+              <circle cx="24" cy="24" r="10" fill="#ffffff"/>
+              <circle cx="13" cy="13" r="2"  fill="#ffffff" class="brand-animate"/>
+              <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF" />
+              <circle cx="24" cy="24" r="3" fill="#000000"/>
+           </svg>
+        
+           <img src="images/logo.png" alt="." class="hide">
+           <span class="hidden-folded inline">SoulFul</span>
+        </a>
+      <a data-dismiss="modal" class="text-muted text-lg1 p-x modal-close-btn">&times;</a>
+        <!-- / brand -->
+   </div>
+  <div class="page_two">
+  
+    <main class="page_two__main">
+     
+        <div class="padding" style="width:100%; height: 200px;">
+          <div style="width: 50%;  float: left; text-align: center;"">
+            <div class="legend-div">
+              <canvas id="pieChartCanvas2_10" style="width:150px; height:150px;"></canvas>
+              
+            </div>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+          </div>
+          <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
+            <div id='legend-div11' class="legend-div">
+
+            </div>
+          </div>
+        </div>
+      <div class="padding" style="width:100%; height: 200px;">
+               <div style="width: 100%; text-align: center;">
+                  <div class="chart-div">
+                     <canvas id="pieChartCanvas3_10" width="260px" height="160px"></canvas>
+                     
+                  </div>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+               </div>
+               
+            </div>
+   
+   
+        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+      <div class="page_two__main__current_music_info">
+        <span id = "song_name_10"class="currrent_music_info__title">Lullaby</span>
+        <span id = "song_artist_10" class="currrent_music_info__singer text-muted">적재</span>
+      </div>
+      <div class="page_two__main__play_time">
+        <span>2:13</span>
+        <span>3:28</span>
+      </div>
+      <div class="page_two__main__time_bar">
+        <div class="time_bar__time_stamp"></div>
+        <i class="fas fa-circle"></i>
+      </div>
+      <div class="page_two__main__controller">
+        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
+        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
+        <button class="btn-playpause" style="margin: 10px;">Play</button>
+        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
+        <i class="fas fa-random" style="color: whitesmoke"></i>
+      </div>
+    </main>
+  </div>
+
+        </div>
+  </div>
+
+<!--  -->
 
  <!-- aside -->
  <div id="aside" class="app-aside modal fade nav-dropdown">
@@ -226,7 +1777,7 @@
         </svg>
       
         <img src="resources/images/logo.png" alt="." class="hide">
-        <span class="hidden-folded inline">SoulFull</span>
+        <span class="hidden-folded inline">SoulFul</span>
       </a>
       <!-- / brand -->
 </div>
@@ -417,7 +1968,7 @@
         </svg>
       
         <img src="resources/images/logo.png" alt="." class="hide">
-        <span class="hidden-folded inline">SoulFull</span>
+        <span class="hidden-folded inline">SoulFul</span>
       </a>
   
       <!-- / brand -->
@@ -461,26 +2012,26 @@
 <!-- ############ PAGE START-->
 <div class="pos-rlt">
   
+</div>
 <div class="page-content">
   <div class="padding b-b">
-    <div class="col-lg-9 b-r no-border-md">
+  <div class="padding">
     <div class="row-col">
-    
         <div class="col-sm w w-auto-xs m-b">
           <div class="item w r">
             <div class="item-media">
-              <div class="item-media-content" style="background-image: url('resources/images/b0.jpg');"></div>
+              <div class="item-media-content" ></div>
+                <a id="album_img" class="item-media-content" ></a>
+            
             </div>
           </div>
         </div>
         <div class="col-sm">
           <div class="p-l-md no-padding-xs">
-            <div class="page-title">
-              <h1 class="inline h2">Simple Place To Be</h1>
+            <div class="page-title" style="text-align: center;">
+              <h1 id ="pl_title" class="inline h5"></h1>
             </div>
-   
-            
-           
+                  
           </div>
         </div>
     </div>
@@ -489,289 +2040,297 @@
   <div class="row-col">
     <div class="col-lg-9 b-r no-border-md">
       <div class="padding">
-		<div id="tracks" class="row item-list item-list-xs item-list-li m-b">
-                <div class="col-xs-12" data-toggle="modal" data-target="#play" class="nav-link">
-                	<div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media "> </a>
-                       		<a href="#" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
-            					<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
+
+          
+          <div id="tracks" class="row item-list item-list-xs item-list-li m-b">
+                <div class="col-xs-12" data-toggle="modal" data-target="#play1" class="nav-link">
+           
+                   <div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                  
+                    <div class="item-media "> </a>
+                       
+                       
+                        <a href="#" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                       
+                        <div class="item-title text-ellipsis">
                       
-            					<a>Reflection (Deluxe)</a>
-            				</div>
-            				
-            				
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">5:05</span>
-            		        </div>
+                           <a id = song_name1></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="#" class="text-muted">Fifth Harmony</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-9" data-src="http://api.soundcloud.com/tracks/264094434/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b8.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">All I Need</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">3:10</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play2" class="nav-link">
+                   <div class="item r" data-id="item-9" data-src="http://api.soundcloud.com/tracks/264094434/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b8.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = song_name2></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">Body on me</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">Rita Ora</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">3:55</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play3" class="nav-link">
+                   <div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = "song_name3"></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">Rita Ora</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">I Wanna Be In the Cavalry</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">2:50</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play4" class="nav-link">
+                   <div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = "song_name4"></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-1" data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b0.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">Pull Up</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">Summerella</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">2:50</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play5" class="nav-link">
+                   <div class="item r" data-id="item-1" data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b0.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = "song_name5"></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">Summerella</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">Live Radio</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">Radionomy</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">3:35</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play6" class="nav-link">
+                   <div class="item r" data-id="item-5" data-src="http://streaming.radionomy.com/JamendoLounge">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b4.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = "song_name6"></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">Radionomy</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">Fireworks</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">Kygo</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">4:25</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play7" class="nav-link">
+                   <div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = song_name7></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">Kygo</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-8" data-src="http://api.soundcloud.com/tracks/236288744/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b7.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">Simple Place To Be</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">RYD</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">4:20</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play8" class="nav-link">
+                   <div class="item r" data-id="item-8" data-src="http://api.soundcloud.com/tracks/236288744/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b7.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = "song_name8"></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">RYD</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b9.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">The Open Road</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">Postiljonen</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">5:20</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play9" class="nav-link">
+                   <div class="item r" data-id="item-10" data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b9.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = "song_name9"></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">Postiljonen</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
-                <div class="col-xs-12">
-                	<div class="item r" data-id="item-12" data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-            			<div class="item-media ">
-            				<a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b11.jpg');"></a>
-            				<div class="item-overlay center">
-            					<button  class="btn-playpause">Play</button>
-            				</div>
-            			</div>
-            			<div class="item-info">
-            				<div class="item-overlay bottom text-right">
-            					<a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
-            					<a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-            					<div class="dropdown-menu pull-right black lt"></div>
-            				</div>
-            				<div class="item-title text-ellipsis">
-            					<a href="trackDetail.do">Happy ending</a>
-            				</div>
-            				<div class="item-author text-sm text-ellipsis hide">
-            					<a href="artist.detail.html" class="text-muted">Postiljonen</a>
-            				</div>
-            				<div class="item-meta text-sm text-muted">
-            		          <span class="item-meta-right">5:20</span>
-            		        </div>
+                     </div>
+                  </div>
+               </div>
+                <div class="col-xs-12" data-toggle="modal" data-target="#play10" class="nav-link">
+                   <div class="item r" data-id="item-12" data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
+                     <div class="item-media ">
+                        <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b11.jpg');"></a>
+                        <div class="item-overlay center">
+                           <button  class="btn-playpause">Play</button>
+                        </div>
+                     </div>
+                     <div class="item-info">
+                        <div class="item-overlay bottom text-right">
+                           <a href="#" class="btn-favorite"><i class="fa fa-heart-o"></i></a>
+                           <a href="#" class="btn-more" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
+                           <div class="dropdown-menu pull-right black lt"></div>
+                        </div>
+                        <div class="item-title text-ellipsis">
+                           <a id = "song_name10"></a>
+                        </div>
+                        <div class="item-author text-sm text-ellipsis hide">
+                           <a href="artist.detail.html" class="text-muted">Postiljonen</a>
+                        </div>
+                        <div class="item-meta text-sm text-muted">
+                            <span class="item-meta-right"></span>
+                          </div>
             
             
-            			</div>
-            		</div>
-            	</div>
+                     </div>
+                  </div>
+               </div>
           </div>
-       
+       </div>
 
 <!-- ############ PAGE END-->
 
@@ -802,11 +2361,11 @@
                         <div class="col-xs-12">
                           <div class="item r" data-id="item-3" data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                           <div class="item-media ">
-                            <a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
+                            <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b2.jpg');"></a>
                           </div>
                           <div class="item-info">
                             <div class="item-title text-ellipsis">
-                              <a href="trackDetail.do">I Wanna Be In the Cavalry</a>
+                              <a href="track.detail.html">I Wanna Be In the Cavalry</a>
                             </div>
                             <div class="item-author text-sm text-ellipsis ">
                               <a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
@@ -821,11 +2380,11 @@
                         <div class="col-xs-12">
                           <div class="item r" data-id="item-6" data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                           <div class="item-media ">
-                            <a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
+                            <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b5.jpg');"></a>
                           </div>
                           <div class="item-info">
                             <div class="item-title text-ellipsis">
-                              <a href="trackDetail.do">Body on me</a>
+                              <a href="track.detail.html">Body on me</a>
                             </div>
                             <div class="item-author text-sm text-ellipsis ">
                               <a href="artist.detail.html" class="text-muted">Rita Ora</a>
@@ -840,11 +2399,11 @@
                         <div class="col-xs-12">
                           <div class="item r" data-id="item-2" data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                           <div class="item-media ">
-                            <a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
+                            <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b1.jpg');"></a>
                           </div>
                           <div class="item-info">
                             <div class="item-title text-ellipsis">
-                              <a href="trackDetail.do">Fireworks</a>
+                              <a href="track.detail.html">Fireworks</a>
                             </div>
                             <div class="item-author text-sm text-ellipsis ">
                               <a href="artist.detail.html" class="text-muted">Kygo</a>
@@ -859,11 +2418,11 @@
                         <div class="col-xs-12">
                           <div class="item r" data-id="item-7" data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
                           <div class="item-media ">
-                            <a href="trackDetail.do" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
+                            <a href="track.detail.html" class="item-media-content" style="background-image: url('resources/images/b6.jpg');"></a>
                           </div>
                           <div class="item-info">
                             <div class="item-title text-ellipsis">
-                              <a href="trackDetail.do">Reflection (Deluxe)</a>
+                              <a href="track.detail.html">Reflection (Deluxe)</a>
                             </div>
                             <div class="item-author text-sm text-ellipsis ">
                               <a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
@@ -963,40 +2522,86 @@
 
 <!-- ############ imoji Start 이모지 클릭창 시작 -->
 
-<div class="modal dark lt fade" id="imoji-modal" data-backdrop="false">
-	
-	<div class="row-col">
-	  <div class="p-a-lg h-v row-cell v-m">
-		<a data-dismiss="modal" class="text-muted text-lg p-x modal-close-btn">&times;</a>
-			<div style="position: static; width: 100%; height: 50%; text-align: center;"><h3>지금 기분 어떠신가요?</h3>
-				<div style="width: 100%; height: 20px;"></div>
-				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji1.png"alt="Nothing" width="80px" height="80px"><br>기쁨</button>
-				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji2.png"alt="Nothing" width="80px" height="80px"><br>슬픔</button>
-				<div style="width: 100%; height: 20px;"></div> 
-				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji3.png"alt="Nothing" width="80px" height="80px"><br>편안</button>
-				<button type="button" class="btn bg" style="color:#ffffffde;"><input type='image' name="imoji" value="good" src="resources/images/imoji4.png"alt="Nothing" width="80px" height="80px"><br>흥분</button>
-			
-			
-			
-			</div>
-			<div style="width: 100%; height: 30%; position: static;">
+<div class="modal dk lt fade" id="imoji-modal" data-backdrop="false">
+   
+   <div class="row-col">
+     <div class="p-a-lg h-v row-cell v-m">
+      <a data-dismiss="modal" class="text-muted text-lg p-x modal-close-btn">&times;</a>
+         <div style="position: static; width: 100%; height: 50%; text-align: center; margin-top: 56px;"><h3 class="h3">지금 기분 어떠신가요?</h3>
+            <div style="width: 100%; height: 20px;"></div>
+            <button type="button" class="btn dk" style="color:#ffffffde;"><input type='image' name="imoji" id="happy" src="resources/images/imoji1.png"   alt="Nothing" width="80px" height="80px"><br>기뻐요</button>
+            <button type="button" class="btn dk" style="color:#ffffffde;"><input type='image' name="imoji" id="sad" src="resources/images/imoji2.png"   alt="Nothing" width="80px" height="80px"><br>슬퍼요</button>
+            <div style="width: 100%; height: 20px;"></div> 
+            <button type="button" class="btn dk" style="color:#ffffffde;"><input type='image' name="imoji" id="relex" src="resources/images/imoji3.png"   alt="Nothing" width="80px" height="80px"><br>편안해요</button>
+            <button type="button" class="btn dk" style="color:#ffffffde;"><input type='image' name="imoji" id="senchi" src="resources/images/imoji4.png"   alt="Nothing" width="80px" height="80px"><br>센치해요</button>
+            <div style="width: 100%; height: 20px;"></div> 
+            <button type="button" class="btn dk" style="color:#ffffffde;"><input type='image' name="imoji" id="upup" src="resources/images/imoji5.png"   alt="Nothing" width="80px" height="80px"><br>흥분돼요</button>
+            <button type="button" class="btn dk" style="color:#ffffffde;"><input type='image' name="imoji" id="stress" src="resources/images/imoji6.png"   alt="Nothing" width="80px" height="80px"><br>스트레스</button>
+            <div style="width: 100%; height: 20px;"></div> 
+            <button type="button" class="btn dk" style="color:#ffffffde;"><input type='image' name="imoji" id="dugudugu" src="resources/images/imoji7.png"   alt="Nothing" width="80px" height="80px"><br>기대돼요</button>
+            <button type="button" class="btn dk" style="color:#ffffffde;"><input type='image' name="imoji" id="dabdab" src="resources/images/imoji8.png"   alt="Nothing" width="80px" height="80px"><br>답답해요</button>
+         
+         </div>
+         <div style="width: 100%; height: 30%; position: static;">
 
-			</div>
-			
+         </div>
+         <div style="width: 100%; height: 20%;">
 
-			
-			</div>
-		  </div>
-		</div>
+         </div>
+
+         
+         </div>
+        </div>
+      </div>
+
 
 
 <!-- ############ imoji 이모지 끝 END -->
   <!-- ############ SHARE START -->
+  <div id="share-modal" class="modal fade animate">
+    <div class="modal-dialog">
+      <div class="modal-content fade-down">
+        <div class="modal-header">
   
+          <h5 class="modal-title">Share</h5>
+        </div>
+        <div class="modal-body p-lg">
+          <div id="share-list" class="m-b">
+            <a href="" class="btn btn-icon btn-social rounded btn-social-colored indigo" title="Facebook">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-facebook"></i>
+            </a>
+  
+            <a href="" class="btn btn-icon btn-social rounded btn-social-colored light-blue" title="Twitter">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-twitter"></i>
+            </a>
+  
+            <a href="" class="btn btn-icon btn-social rounded btn-social-colored red-600" title="Google+">
+                <i class="fa fa-google-plus"></i>
+                <i class="fa fa-google-plus"></i>
+            </a>
+  
+            <a href="" class="btn btn-icon btn-social rounded btn-social-colored blue-grey-600" title="Trumblr">
+                <i class="fa fa-tumblr"></i>
+                <i class="fa fa-tumblr"></i>
+            </a>
+  
+            <a href="" class="btn btn-icon btn-social rounded btn-social-colored red-700" title="Pinterst">
+                <i class="fa fa-pinterest"></i>
+                <i class="fa fa-pinterest"></i>
+            </a>
+          </div>
+          <div>
+            <input class="form-control" value="http://plamusic.com/slug"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- ############ SHARE END -->
 
 <!-- ############ LAYOUT END-->
-  </div>
   </div>
 
 <!-- build:js resources/scripts/app.min.js -->
@@ -1024,7 +2629,7 @@
   <script src="resources/scripts/ui-device.js"></script>
   <script src="resources/scripts/ui-form.js"></script>
   <script src="resources/scripts/ui-nav.js"></script>
-  <!-- <script src="resources/scripts/ui-screenfull.js"></script> -->
+  <script src="resources/scripts/ui-screenfull.js"></script>
   <script src="resources/scripts/ui-scroll-to.js"></script>
   <script src="resources/scripts/ui-toggle-class.js"></script>
   <script src="resources/scripts/ui-taburl.js"></script>
@@ -1032,7 +2637,6 @@
   <script src="resources/scripts/site.js"></script>
   <script src="resources/scripts/ajax.js"></script>
   <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
-  <script src="resources/scripts/graph3.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
   
 <!-- endbuild -->

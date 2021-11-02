@@ -10,9 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class PlaylistsVO {
-   // 플레이리스트 순번, 플레이리스트 제목, 작성자 아이디, 작성 일자, 곡 순번 리스트
-      
+public class Display_playlistsVO {
+
 	 private int pl_seq;
      private String pl_title;
      private String user_id;
@@ -29,7 +28,6 @@ public class PlaylistsVO {
      private int song_code7;
      private int song_code8;
      private int song_code9;
-     private int song_code10;
      private double ly_happy; 
      private double ly_sad; 
      private double ly_rest; 
@@ -38,4 +36,6 @@ public class PlaylistsVO {
      private double tr_dance; 
      private double tr_ener; 
      private double tr_loud; 
+     
+	
 }

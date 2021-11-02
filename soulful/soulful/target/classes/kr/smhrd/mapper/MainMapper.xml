@@ -5,17 +5,72 @@
 <mapper namespace="kr.smhrd.mapper.MainMapper">
      <!-- namespace를 다르게 해주면 id값이 같아도 저장된 장소가 달라 상관이 없다. -->
      <!-- 인터페이스 매퍼에 추상메소드이름과 같게 하면 된다. -->
-	<!-- VO에 대한 정보가 없으니 넣어줘야 한다!! -->
-	
-	<!-- 송인포에 먼저 접근해보자 -->
-	<select id ="songinfos_List" resultType="kr.smhrd.mapper.SonginfosVO">
-	    select * from campus_E_4_1022.songinfos
-	</select>
-	
-	<select id ="songinfos_ListAjax" resultType="kr.smhrd.mapper.SonginfosVO">
-	    select * from campus_E_4_1022.songinfos
-	</select>
-	
-
-	
+   <!-- VO에 대한 정보가 없으니 넣어줘야 한다!! -->
+   
+   <!-- 송인포에 먼저 접근해보자 -->
+   <select id ="songinfos_List" resultType="kr.smhrd.mapper.SonginfosVO">
+       select * from campus_E_4_1022.songinfos
+   </select>
+   
+   <select id ="songinfos_ListAjax" resultType="kr.smhrd.mapper.SonginfosVO">
+       select * from campus_E_4_1022.songinfos
+   </select>
+   
+   <select id = "playlist_List" resultType="kr.smhrd.mapper.PlaylistsVO">
+       select * from campus_E_4_1022.playlists
+   </select>
+   
+  <select id = "playlist_ListAjax" resultType="kr.smhrd.mapper.PlaylistsVO">
+       select * from campus_E_4_1022
+   </select>
+   
+   <select id = "playlist_ListAjax_happy" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where happy="1"
+   </select>
+   
+    <select id = "playlist_ListAjax_sad" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where sad="1"
+   </select>
+   
+     <select id = "playlist_ListAjax_rest" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where rest="1"
+   </select>
+   
+      <select id = "playlist_ListAjax_cent" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where cent="1"
+   </select>
+   
+       <select id = "playlist_ListAjax_shout" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where shout="1"
+   </select>
+   
+        <select id = "playlist_ListAjax_stress" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where stress="1"
+   </select>
+   
+         <select id = "playlist_ListAjax_gidae" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where gidae="1"
+   </select>
+   
+         <select id = "playlist_ListAjax_dap" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where dap="1"
+   </select>
+   
+         <select id = "playlist_ListAjax_clear" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where clear="1"
+   </select>
+   
+        <select id = "playlist_ListAjax_rain" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where rain="1"
+   </select>
+   
+         <select id = "playlist_ListAjax_cloud" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where cloud="1"
+   </select>
+   
+         <select id = "playlist_ListAjax_snow" resultType="kr.smhrd.mapper.PlaylistsVO">
+       SELECT * FROM campus_E_4_1022.playlists where snow="1"
+   </select>
+   
+     
 </mapper>

@@ -18,7 +18,7 @@ window.mep = window.mep || {};
 		togglePlaylist: 'Toggle Playlist',
 		repeat: 'Repeat',
 		shuffle: 'Shuffle',
-		error: 'Oh snap, there was a playback error!'
+		
 	}, mep.l10n || {});
 
 	mep.settings = mep.settings || {};
