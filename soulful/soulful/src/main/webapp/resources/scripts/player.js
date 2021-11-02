@@ -47,7 +47,7 @@
             "except": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quamquam tu hanc copiosiorem etiam soles dicere. Nihil illinc huc pervenit.",
             "link": "track.detail.html",
             "thumb": { "src": "../resources/images/b1.jpg" },
-            "src": "http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c",
+            "src": "resources/musics/Put Me Thru.mp3",
             "meta": {
                 "author": "Summerella",
                 "authorlink": "artist.detail.html",
