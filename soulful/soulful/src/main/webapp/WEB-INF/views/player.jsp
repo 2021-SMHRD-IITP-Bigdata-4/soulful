@@ -498,7 +498,7 @@ function ajaxsnow(data){
 
 	
 	  
-// =======================여기서 감정 선택 onclick이용
+// =======================여기서 가사 감정 선택 onclick이용
 // 해피
 
 function loadJson_happy(){
@@ -766,11 +766,11 @@ function ajaxshout(data){
  	 $('#play_title1').text(data[0].pl_title);
  	 $('#play_title2').text(data[1].pl_title);
  	 
- 	 var show_emotion = "끈적하게 분위기 한번 잡아볼까요?"
+ 	 var show_emotion = "끈적하게 음원 분위기 한번 잡아볼까요?"
  		 $('.widget-title.h6.m-b').text(show_emotion);
  	 
- 	 $('#play_img1').prepend('<img src =resources/images/섹시한분위기_신남.jpg/>');
- 	 $('#play_img2').prepend('<img src =resources/images/섹시한분위기_조용.jpg/>');
+ 	 $('#play_img1').prepend('<img src =resources/images/섹시한음원 분위기_신남.jpg/>');
+ 	 $('#play_img2').prepend('<img src =resources/images/섹시한음원 분위기_조용.jpg/>');
  	// 그래프 값 넣는곳 
 
 		
@@ -1395,7 +1395,7 @@ document.querySelector("#btn1").addEventListener("click", function () {
                      <canvas id="pieChartCanvas" width="150px" height="150px" style=""></canvas>
                      <!-- 사진이 내려오는 문제점이 여기다 problem 클릭할때마다 width, height가 증가한다.-->
                   </div>
-                  <h6 class="gg" style="text-align: center; margin-top: 12px; width: 150px;">감정 분석 결과</h6>
+                  <h6 class="gg" style="text-align: center; margin-top: 12px; width: 150px;">가사 감정 분석 결과</h6>
                </div>
                <div style="width: 50%; float:right;">
                   <div id='legend-div' class="legend-div">
@@ -1419,7 +1419,7 @@ document.querySelector("#btn1").addEventListener("click", function () {
                      <canvas id="pieChartCanvas1" width="281px" height="160px"></canvas>
                      
                   </div>
-                  <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h6>
+                  <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h6>
                </div>
                
             </div>

@@ -77,7 +77,7 @@
 			    labels: ['이', '버', '서', '어'],
 			    datasets: [{
 			        data: [70, 80, 85, 30],
-			        backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+			        backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 			    }] 
 			};
      
@@ -695,7 +695,7 @@
 				     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 				         datasets: [{
 				         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-				         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+				         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 				     }] 
 				 };
 
@@ -724,7 +724,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -753,7 +753,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -783,7 +783,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -813,7 +813,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -843,7 +843,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -873,7 +873,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -903,7 +903,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -933,7 +933,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -962,7 +962,7 @@
 					     labels: ['어쿠스틱', '댄스', '활기', '화려함'],
 					         datasets: [{
 						         data: [data[i].track_acousticness,data[i].track_danceability,data[i].track_energy,data[i].track_loudness,],
-					         backgroundColor: ['rgb(186, 136, 224)', 'rgb(218, 129, 114)', 'rgb(167, 185, 158)', 'rgb(203, 169, 169)']
+					         backgroundColor: ['rgb(198, 162, 198)', 'rgb(161, 137, 185)', 'rgb(188, 143, 143)', 'rgb(217, 177, 155)']
 					     }] 
 					 };
 
@@ -1056,24 +1056,18 @@
    
         <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_1"class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_1"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_1"class="currrent_music_info__title"></span>
+        <span id = "song_artist_1"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px; padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
 
@@ -1133,24 +1127,18 @@
    
         <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_2"class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_2"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_2"class="currrent_music_info__title"></span>
+        <span id = "song_artist_2"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
 
@@ -1210,28 +1198,21 @@
    
         <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_3"class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_3"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_3"class="currrent_music_info__title"></span>
+        <span id = "song_artist_3"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px; padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
-
-        </div>
+          </div>
   </div>
   
   <div id="play4" class="app-aside modal fade nav-dropdown">
@@ -1284,31 +1265,23 @@
                
             </div>
    
-   
-        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+         <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_4"class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_4"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_4"class="currrent_music_info__title"></span>
+        <span id = "song_artist_4"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px;padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
-
-        </div>
+          </div>
   </div>
   
   <div id="play5" class="app-aside modal fade nav-dropdown">
@@ -1361,31 +1334,23 @@
                
             </div>
    
-   
-        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+          <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_5" class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_5"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_5"class="currrent_music_info__title"></span>
+        <span id = "song_artist_5"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px;padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
-
-        </div>
+          </div>
   </div>
   
   <div id="play6" class="app-aside modal fade nav-dropdown">
@@ -1438,31 +1403,23 @@
                
             </div>
    
-   
-        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+           <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_6" class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_6"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_6"class="currrent_music_info__title"></span>
+        <span id = "song_artist_6"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px;padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
-
-        </div>
+          </div>
   </div>
   
   <div id="play7" class="app-aside modal fade nav-dropdown">
@@ -1515,31 +1472,23 @@
                
             </div>
    
-   
-        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+          <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_7"class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_7"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_7"class="currrent_music_info__title"></span>
+        <span id = "song_artist_7"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px;padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
-
-        </div>
+          </div>
   </div>
   
   <div id="play8" class="app-aside modal fade nav-dropdown">
@@ -1592,31 +1541,24 @@
                
             </div>
    
-   
-        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+           <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_8"class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_8"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_8"class="currrent_music_info__title"></span>
+        <span id = "song_artist_8"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px;padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
-
-        </div>
+  
+          </div>
   </div>
   
   <div id="play9" class="app-aside modal fade nav-dropdown">
@@ -1669,31 +1611,23 @@
                
             </div>
    
-   
-        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+           <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_9"class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_9"class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_9"class="currrent_music_info__title"></span>
+        <span id = "song_artist_9"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px;padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
-
-        </div>
+          </div>
   </div>
   
   <div id="play10" class="app-aside modal fade nav-dropdown">
@@ -1745,33 +1679,24 @@
                </div>
                
             </div>
-   
-   
-        <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
+           <div class="b-b m-y1" style="width: 100%; margin: 10px 0;"></div>
       <div class="page_two__main__current_music_info">
-        <span id = "song_name_10"class="currrent_music_info__title">Lullaby</span>
-        <span id = "song_artist_10" class="currrent_music_info__singer text-muted">적재</span>
+        <span id = "song_name_10"class="currrent_music_info__title"></span>
+        <span id = "song_artist_10"class="currrent_music_info__singer text-muted"></span>
       </div>
-      <div class="page_two__main__play_time">
-        <span>2:13</span>
-        <span>3:28</span>
-      </div>
-      <div class="page_two__main__time_bar">
-        <div class="time_bar__time_stamp"></div>
-        <i class="fas fa-circle"></i>
-      </div>
+      
+
+
       <div class="page_two__main__controller">
-        <i class="fas fa-sync-alt" style="color: whitesmoke;"></i>
-        <button type="button" class="btn btn bg" style="color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_previous</i></button>
-        <button class="btn-playpause" style="margin: 10px;">Play</button>
-        <button type="button" class="btn btn bg" style=" color:#ffffffde;"><i class="material-icons" style="color: whitesmoke; font-size: 35px;">skip_next</i></button>
-        <i class="fas fa-random" style="color: whitesmoke"></i>
+      <div style="width:100%; height:145px;padding-top: 20px;">
+         <img src="resources/images/soulful.png" width="100%" height="100px"/>
       </div>
+      </div>
+
     </main>
   </div>
-
-        </div>
-  </div>
+</div>
+      </div>
 
 <!--  -->
 

@@ -246,17 +246,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 28px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .currrent_music_info__title {
-  font-size: 20px;
+  font-size: 26px;
   margin-bottom: 20px;
 }
 
 .currrent_music_info__singer {
-  font-size: 16px;
+  font-size: 17px;
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -298,7 +298,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 .page_two__main__controller .fa-play-circle {
