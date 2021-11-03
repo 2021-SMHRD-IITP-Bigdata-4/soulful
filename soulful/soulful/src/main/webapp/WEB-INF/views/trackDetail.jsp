@@ -67,7 +67,7 @@
 
 
    let pieChartData2 = {
-			    labels: ['기쁨', '슬픔', '편안', '흥분'],
+			    labels: ['기쁨', '슬픔', '편안', '유혹'],
 			    datasets: [{
 			        data: [1, 2, 3, 4],
 			        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -685,7 +685,7 @@
  	for (var i= 0; i < data.length; i++){
 		if (data[i].song_code == code1){
 			 pieChartData2_1 = {
-					    labels: ['기쁨', '슬픔', '편안', '흥분'],
+					    labels: ['기쁨', '슬픔', '편안', '유혹'],
 					    datasets: [{
 					        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 					        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -714,7 +714,7 @@
 			if (data[i].song_code == code2){
 				
 				 pieChartData2_2 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -743,7 +743,7 @@
 			if (data[i].song_code == code3){
 				
 				 pieChartData2_3 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -773,7 +773,7 @@
 			if (data[i].song_code == code4){
 				
 				 pieChartData2_4 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -803,7 +803,7 @@
 			if (data[i].song_code == code5){
 				
 				 pieChartData2_5 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -833,7 +833,7 @@
 			if (data[i].song_code == code6){
 				
 				 pieChartData2_6 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -863,7 +863,7 @@
 			if (data[i].song_code == code7){
 				
 				 pieChartData2_7 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -893,7 +893,7 @@
 			if (data[i].song_code == code8){
 				
 				 pieChartData2_8 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -923,7 +923,7 @@
 			if (data[i].song_code == code9){
 				
 				 pieChartData2_9 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -952,7 +952,7 @@
 			if (data[i].song_code == code10){
 				
 				 pieChartData2_10 = {
-						    labels: ['기쁨', '슬픔', '편안', '흥분'],
+						    labels: ['기쁨', '슬픔', '편안', '유혹'],
 						    datasets: [{
 						        data: [data[i].lyric_happy, data[i].lyric_sad, data[i].lyric_rest, data[i].lyric_sexy],
 						        backgroundColor: ['rgb(255, 184, 105)', 'rgb(118, 117, 167)', 'rgb(185, 111, 144)', 'rgb(218, 78, 78)']
@@ -1034,7 +1034,7 @@
               <canvas id="pieChartCanvas2_1" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div2' class="legend-div">
@@ -1048,7 +1048,7 @@
                      <canvas id="pieChartCanvas3_1" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1105,7 +1105,7 @@
               <canvas id="pieChartCanvas2_2" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div3' class="legend-div">
@@ -1119,7 +1119,7 @@
                      <canvas id="pieChartCanvas3_2" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1176,7 +1176,7 @@
               <canvas id="pieChartCanvas2_3" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div4' class="legend-div">
@@ -1190,7 +1190,7 @@
                      <canvas id="pieChartCanvas3_3" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1246,7 +1246,7 @@
               <canvas id="pieChartCanvas2_4" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div5' class="legend-div">
@@ -1260,7 +1260,7 @@
                      <canvas id="pieChartCanvas3_4" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1315,7 +1315,7 @@
               <canvas id="pieChartCanvas2_5" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div6' class="legend-div">
@@ -1329,7 +1329,7 @@
                      <canvas id="pieChartCanvas3_5" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1384,7 +1384,7 @@
               <canvas id="pieChartCanvas2_6" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div7' class="legend-div">
@@ -1398,7 +1398,7 @@
                      <canvas id="pieChartCanvas3_6" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1453,7 +1453,7 @@
               <canvas id="pieChartCanvas2_7" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div8' class="legend-div">
@@ -1467,7 +1467,7 @@
                      <canvas id="pieChartCanvas3_7" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1522,7 +1522,7 @@
               <canvas id="pieChartCanvas2_8" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div9' class="legend-div">
@@ -1536,7 +1536,7 @@
                      <canvas id="pieChartCanvas3_8" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1592,7 +1592,7 @@
               <canvas id="pieChartCanvas2_9" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div10' class="legend-div">
@@ -1606,7 +1606,7 @@
                      <canvas id="pieChartCanvas3_9" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>
@@ -1661,7 +1661,7 @@
               <canvas id="pieChartCanvas2_10" style="width:150px; height:150px;"></canvas>
               
             </div>
-            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">감정 분석 결과</h6>
+            <h6 class="gg" style="text-align: center; margin-top: 12px; width: 100%; padding-left:17px;">가사 감정 분석 결과</h6>
           </div>
           <div style="width: 50%; float:right; padding-top: 15px; padding-left: 20px;">
             <div id='legend-div11' class="legend-div">
@@ -1675,7 +1675,7 @@
                      <canvas id="pieChartCanvas3_10" width="260px" height="160px"></canvas>
                      
                   </div>
-                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">분위기 분석 결과</h5>
+                  <h5 class="gg" style="text-align: center; margin-top: 12px; width: 100%;">음원 분위기 분석 결과</h5>
                </div>
                
             </div>

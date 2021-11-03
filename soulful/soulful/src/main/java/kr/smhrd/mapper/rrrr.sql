@@ -2,7 +2,7 @@ select * from campus_E_4_1022.songinfos where song_title = "Dance With Me";
 select * from campus_E_4_1022.members;
 select * from campus_E_4_1022.playlists
 
-select * from campus_E_4_1022.playlists
+select * from campus_E_4_1022.playlists where playlist_img = "조용_섹시"
 select * from campus_E_4_1022.songinfos where song_title = "Suddenly";
 
 
